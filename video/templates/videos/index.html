@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<h1>Highlights of previous matches</h1>
+<body>
+
+{% for i in all_videos %}
+    <h2>{{ i.video_title }}</h2>
+    <iframe width="853" height="480"
+            src="{{ i.youtube_embedded_url }}"
+            frameborder="0"
+            allowfullscreen>
+    </iframe> <br><br><br><br>
+{% endfor %}
+
+</body>
+</html>
+
