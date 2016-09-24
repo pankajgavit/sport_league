@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Teams page</title>
+    <h1> This is the Team section page</h1>
 </head>
 <body>
-<h1> This is the Team section page</h1>
+
+<ol>
+    {% for team in all_teams %}
+    <li>
+    <a href="/team/{{ team.id }}/"> {{ team.team_name }} </a>
+    </li>
+    {% endfor %}
+</ol>
+
 </body>
 </html>
