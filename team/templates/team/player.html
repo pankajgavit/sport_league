@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ team.team_name }}</title>
+</head>
+<body>
+<h1>
+    The team players of {{ team.team_name }} :<br>
+
+</h1>
+
+<ul>
+    {% for player in team.player_set.all %}
+    <li>
+        <img src='{{ player.player_image }}' height="200" width="200"> <br>
+        Name  - {{ player.player_name }} <br>
+        Date of Birth  - {{ player.DOB }} <br>
+        Role  - {{ player.Role }} <br>
+        Team  - {{ player.team }} <br>
+        <br>
+        <br>
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

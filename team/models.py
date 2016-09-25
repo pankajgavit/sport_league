@@ -20,6 +20,7 @@ class Player(models.Model):
     DOB = models.DateField()
     Role = models.CharField(max_length=50)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    player_image = models.CharField(max_length=1000,default='nothing')
 
     def __str__(self):
         return self.player_name
