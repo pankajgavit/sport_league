@@ -1,28 +1,134 @@
+{% load staticfiles %}
+        <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'team/css/touchTouch.css' %}" type="text/css" media="all" />
+		<link href="{% static 'team/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{% static 'team/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="soccer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+	   <script type="text/javascript">
+			$(document).ready(function() {
+				$('.fancybox').fancybox();
+			});
+		</script>
 
-<!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>{{ team.team_name }}</title>
+	<title>Soccer a Sports Category Flat Bootstrap Responsive Website Template | Events :: w3layouts</title>
 </head>
+
 <body>
-<h1>
-    The team players of {{ team.team_name }} :<br>
+<!-- header -->
+<div class="header">
+	 <div class="container">
+		 <div class="logo">
+			   <h1><a href="index.html">SPORTS LEAGUE</a></h1>
+		 </div>
+		 <div class="top-menu">
+			 <span class="menu"></span>
+			  <ul>
+				  <li class="active"><a href="index.html">HOME</a></li>
+				 <li><a href="institutional.html">INSTITUTIONAL</a></li>
+				 <li><a href="fixtures.html">FIXTURES</a></li>
+				 <li><a href="results.html">RESULTS</a></li>
+				 <li ><a href="broadcast.html">BROADCAST</a></li>
+				 <li><a href="contact.html">CONTACT US</a></li>
+			 </ul>
+		 </div>
+		 <!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		 <!-- script-for-menu -->
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!-- //header -->
+<!-- banner -->
+<div class="strip">
+	 <div class="container">
+	 <div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="Search...">
+				<input type="submit" value="">
+			</form>
+     </div>
+	 <div class="social">
+			 <a href="#"><i class="fa fa-lg fa-facebook"></i></a>
+			 <a href="#"><i class="fa fa-lg fa-twitter"></i></a>
 
-</h1>
+			 <a href="#"><i class="fa fa-lg fa-google-plus"></i></a>
+			 <a href="#"><i class="fa fa-lg fa-youtube"></i></a>
+	 </div>
+		<div class="clearfix"></div>
+		</div>
+</div>
+<!-- banner -->
+<!-- //header -->
+<div class="container">
+		 <ol class="breadcrumb">
+		  <li><a href="{% url 'home:index' %}">Home</a></li>
+		  <li><a href="{% url 'team:index' %}">Team</a></li>
+             <li class="active">{{ team.team_name }}</li>
+		 </ol>
+</div>
 
-<ul>
-    {% for player in team.player_set.all %}
-    <li>
-        <img src='{{ player.player_image }}' height="200" width="200"> <br>
-        Name  - {{ player.player_name }} <br>
+<div class="gallery-text">
+		 <div class="container">
+		 <h2>{{ team.team_name }}</h2>
+		 <p>Players in the {{ team.team_name }} are as follows:</p>
+		 </div>
+</div>
+<div class="container">
+		 <div class="main" >
+		 <div class="gallery">
+			  <section class="row">
+                  {% for player in team.player_set.all %}
+        <img src='{{ player.player_image.url }}' height="200" width="200" class="img-responsive" alt="" > <br>
+        <div class="navbar-text">Name  - {{ player.player_name }} <br>
         Date of Birth  - {{ player.DOB }} <br>
         Role  - {{ player.Role }} <br>
         Team  - {{ player.team }} <br>
         <br>
         <br>
-    </li>
+                      </div>
     {% endfor %}
-</ul>
+			  </section>
+			 <div class="clearfix"> </div>
+		  </div>
+         </div>
+</div>
+<!--footer-->
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			<span></span>
+			 <p>© 2016 All Rights Reseverd Design by Sushaanth P</p>
+		 </div>
+		 <div class="footer-menu">
+			 <ul>
+				 <li><a href="index.html">HOME</a></li>
+				 <li><a href="index.html">INSTITUTIONAL</a></li>
+				 <li><a href="index.html">FIXTURES</a></li>
+				 <li><a href="index.html">RESULTS</a></li>
+				 <li class="active"><a href="index.html">BROADCAST</a></li>
+				 <li><a href="index.html">CONTACT US</a></li>
+			 </ul>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!-- //footer -->
 </body>
-</html>
+
+
