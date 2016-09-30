@@ -93,16 +93,36 @@
 		 <div class="main" >
 		 <div class="gallery">
 			  <section class="row">
-                  {% for player in team.player_set.all %}
-        <img src='{{ player.player_image.url }}' height="200" width="200" class="img-responsive" alt="" > <br>
-        <div class="navbar-text">Name  - {{ player.player_name }} <br>
-        Date of Birth  - {{ player.DOB }} <br>
-        Role  - {{ player.Role }} <br>
-        Team  - {{ player.team }} <br>
-        <br>
-        <br>
+                  <div>
+               {% for player in team.coach_set.all %}
+                   <p>
+                        <img src='{{ player.coach_image.url }}' height="200" width="200" class="img-responsive" alt="" > <br>
+                        <div class="navbar-text">Name  - {{ player.coach_name }} <br>
+                                                    Date of Birth  - {{ player.DOB }} <br>
+                                                    Country  - {{ player.country }} <br>
+                                                    Team  - {{ player.coach_team }} <br>
+                                                    Joining date - {{ player.start_date }} <br>
+                                                    Departing date -{{ player.end_date }} <br>
+                            <br>
+                        <br>
+                        </p>
                       </div>
-    {% endfor %}
+                    {% endfor %}
+              </div>
+         <div >
+             {% for player in team.player_set.all %}
+                      <p>
+                        <img src='{{ player.player_image.url }}' height="200px" width="200px" class="img-responsive" alt="" > <br>
+                        <div class="navbar-text">Name  - {{ player.player_name }} <br>
+                                                    Date of Birth  - {{ player.DOB }} <br>
+                                                    Role  - {{ player.Role }} <br>
+                                                    Team  - {{ player.team }} <br>
+                        <br>
+                        <br>
+                        </p>
+                      </div>
+                    {% endfor %}
+         </div>
 			  </section>
 			 <div class="clearfix"> </div>
 		  </div>

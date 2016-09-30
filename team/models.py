@@ -28,6 +28,23 @@ class Player(models.Model):
         return self.player_name
 
 
+class Coach(models.Model):
+    coach_name = models.CharField(max_length=250)
+    DOB = models.DateField()
+    coach_team = models.ForeignKey(Team,on_delete=models.CASCADE)
+    country = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    coach_image = models.FileField()
+
+    def __str__(self):
+        return self.coach_name
+
+
+
+
+
+
 
 
 
