@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/BALE_3AM6195.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/CRISTIANO_3AM6178.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/GABI.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/GODIN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/GRIEZMANN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/Luis_Enrique_009_995927896.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/MODRIC_3AM5246.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/MORATA_3AM5187_1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/OBLAK.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/RAMOS_3AM6159.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/TORRES.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/atletico_2cx9foO.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/coach.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/neymar.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/pique.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/suarez.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ter_stagan.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/w_900x700_131634007784539.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sport_league.iws" />
@@ -113,8 +130,8 @@
       <file leaf-file-name="player.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/team/templates/team/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-573">
-              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+            <state relative-caret-position="90">
+              <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -638,7 +655,21 @@
       <option name="project" value="LOCAL" />
       <updated>1475386585338</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added players and teams for all">
+      <created>1475391914917</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1475391914917</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added coaches for all">
+      <created>1475394854616</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1475394854616</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -652,7 +683,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16837482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -662,7 +693,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.49394855" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.49394855" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -692,7 +723,9 @@
     <MESSAGE value="added team and player model with html and css database" />
     <MESSAGE value="23.34 30-09 added coach models" />
     <MESSAGE value="09:50 02-10 added homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="09:50 02-10 added homepage" />
+    <MESSAGE value="added players and teams for all" />
+    <MESSAGE value="added coaches for all" />
+    <option name="LAST_COMMIT_MESSAGE" value="added coaches for all" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1058,8 +1091,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/team/templates/team/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-573">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+        <state relative-caret-position="90">
+          <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="28" />
           <folding />
         </state>
       </provider>
