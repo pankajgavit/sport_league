@@ -2,27 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="09:50 02-10 added homepage">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/barca_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/gareth.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/messi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/rm_logo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ronaldo.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/zinedine-zindane.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/responsiveslides.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/touchTouch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/js/responsiveslides.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/templates/home/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/abt.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/b1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/b2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/b3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/barca-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr001.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr07.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr20.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/c1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/c2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/c3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/call.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/club.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cnt.ab.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/coach.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/dot.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/e1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/e2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/e3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/marker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/mes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/nav.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/r1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/r2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/s1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/search1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/soccer.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/social.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/t.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/v1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/migrations/0002_auto_20160930_0442.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/migrations/0003_coach.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/responsiveslides.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/touchTouch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/js/responsiveslides.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sport_league.iws" />
@@ -250,6 +288,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sport_league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475382028931</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="09:50 02-10 added homepage">
+      <created>1475382232404</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1475382232404</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -912,6 +999,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
