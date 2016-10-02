@@ -1,67 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="09:50 02-10 added homepage">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/abt.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/b1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/b3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/barca-4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr001.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr07.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/bnr3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/c1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/c2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/c3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/call.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cl4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/club.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/cnt.ab.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/coach.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/dot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/e1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/e2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/e3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/g9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/marker.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/mes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/nav.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/r1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/r2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/s1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/search1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/soccer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/social.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/t.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/images/v1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/migrations/0001_initial.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/migrations/0002_auto_20160930_0442.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/migrations/0003_coach.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/responsiveslides.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/css/touchTouch.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/team/static/team/js/responsiveslides.min.js" />
+    <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/team/templates/team/player.html" afterPath="$PROJECT_DIR$/team/templates/team/player.html" />
     </list>
     <ignored path="sport_league.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -171,8 +113,8 @@
       <file leaf-file-name="player.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/team/templates/team/player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+            <state relative-caret-position="221">
+              <caret line="100" column="61" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -272,7 +214,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,7 +242,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sport_league" />
+              <option name="myItemId" value="team" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,22 +260,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sport_league" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sport_league" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -581,12 +509,12 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="sport_league.settings" />
+        <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\Naushad\AppData\Local\Programs\Python\Python35-32\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="sport_league" />
@@ -689,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475382232404</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added players and teams">
+      <created>1475386333938</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1475386333938</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -703,15 +638,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16868381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973504" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22905983" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29968455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.49394855" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -743,7 +678,8 @@
     <MESSAGE value="added team and player model with html and css database" />
     <MESSAGE value="23.34 30-09 added coach models" />
     <MESSAGE value="09:50 02-10 added homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="09:50 02-10 added homepage" />
+    <MESSAGE value="added players and teams" />
+    <option name="LAST_COMMIT_MESSAGE" value="added players and teams" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -970,7 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,9 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,7 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,9 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1114,8 +1042,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/team/templates/team/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="88" column="47" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+        <state relative-caret-position="221">
+          <caret line="100" column="61" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
           <folding />
         </state>
       </provider>
