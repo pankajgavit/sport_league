@@ -6,4 +6,4 @@ from .models import Matches
 
 def index(request):
     all_matches = Matches.objects.all()
-    return render(request, 'matches/matches_index.html',{'all_matches' : all_matches})
+    return render(request, 'matches/index.html',{'all_matches' : all_matches})

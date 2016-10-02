@@ -81,7 +81,7 @@
 		  <li><a href="{% url 'team:index' %}">Team</a></li>
              <li class="active">{{ team.team_name }}</li>
 		 </ol>
-</div>
+
 
 <div class="gallery-text">
 		 <div class="container">
@@ -89,28 +89,30 @@
 		 <p>Players in the {{ team.team_name }} are as follows:</p>
 		 </div>
 </div>
+</div>
 <div class="container">
 		 <div class="main" >
 		 <div class="gallery" >
 			  <section class="row">
 
-               {% for player in team.coach_set.all %}
-                   <div class="pull-left col-sm-3 " id="ash">
+               {% for matches in all_matches %}
+                   <div class="pull-left col-sm-4 " id="ash">
                    <p>
-                        <img src='{{ player.coach_image.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center" >{{ player.coach_name }}<br>
-                            <br>
-                        <br>
-                        </div>
+                        <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
+                        <div class="navbar-text text-center" >{{ matches.home.team_name }}</div>
                         </p>
                       </div>
-                    {% endfor %}
 
-             {% for player in team.player_set.all %}
-                 <div  class="pull-left col-sm-3 " id="ash" >
+                   <div  class="pull-left col-sm-4 center-block" id="ash" >
+                      <p class="text-center">
+                          VS
+                        </p>
+                 </div>
+
+                 <div  class="pull-left col-sm-4 " id="ash" >
                       <p>
-                        <img src='{{ player.player_image.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center">{{ player.player_name }}<br>
+                        <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
+                        <div class="navbar-text text-center">{{ matches.away.team_name }}<br>
                         <br>
                         <br>
                         </div>
