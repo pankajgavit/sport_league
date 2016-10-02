@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/team/templates/team/player.html" afterPath="$PROJECT_DIR$/team/templates/team/player.html" />
     </list>
     <ignored path="sport_league.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -568,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475258675957</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="09:50 02-10 added homepage">
+      <created>1475382022044</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1475382022044</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -621,7 +627,8 @@
     <MESSAGE value="added team model database" />
     <MESSAGE value="added team and player model with html and css database" />
     <MESSAGE value="23.34 30-09 added coach models" />
-    <option name="LAST_COMMIT_MESSAGE" value="23.34 30-09 added coach models" />
+    <MESSAGE value="09:50 02-10 added homepage" />
+    <option name="LAST_COMMIT_MESSAGE" value="09:50 02-10 added homepage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
