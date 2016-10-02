@@ -1,0 +1,268 @@
+{% load staticfiles %}
+        <link rel="icon" href="{% static 'team/images/soccer.png' %}">
+		<link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'team/css/touchTouch.css' %}" type="text/css" media="all" />
+		<link href="{% static 'team/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{% static 'team/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="soccer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+	   <script type="text/javascript">
+			$(document).ready(function() {
+				$('.fancybox').fancybox();
+			});
+		</script>
+
+<head>
+	<title>Sports League</title>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+	 <div class="container">
+		 <div class="logo">
+			   <h1><a href="{% url 'home:index' %}">SPORTS LEAGUE</a></h1>
+		 </div>	
+		 <div class="top-menu">
+			 <span class="menu"></span>
+			  <ul>
+				 <li class="active"><a href="index.html">HOME</a></li>
+				 <li><a href="institutional.html">INSTITUTIONAL</a></li>
+				 <li><a href="fixtures.html">FIXTURES</a></li>
+				 <li><a href="results.html">RESULTS</a></li>
+				 <li><a href="broadcast.html">BROADCAST</a></li>
+				 <li><a href="contact.html">CONTACT US</a></li>
+			 </ul>			 
+		 </div>			
+		 <!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		 <!-- script-for-menu -->	  	
+
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!-- //header -->
+<!-- banner -->
+<div class="strip">
+	 <div class="container">
+	 <div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="Search...">
+				<input type="submit" value="">
+			</form>
+     </div>     
+	 <div class="social">
+			 <a href="#"><i class="fa fa-lg fa-facebook"></i></a>
+			 <a href="#"><i class="fa fa-lg fa-twitter"></i></a>
+
+			 <a href="#"><i class="fa fa-lg fa-google-plus"></i></a>
+			 <a href="#"><i class="fa fa-lg fa-youtube"></i></a>
+	 </div>
+		<div class="clearfix"></div>
+		</div>
+</div>
+<!-- banner -->
+<div class="banner">
+		<script src="{% static 'home/js/responsiveslides.min.js' %}"></script>
+  <script>
+    $(function () {
+      $("#slider").responsiveSlides({
+      	auto: true,
+      	speed: 600,
+        manualControls: '#slider3-pager',
+      });
+    });
+  </script>
+
+ <div class="slider">
+	  <div class="callbacks_container">
+	     <ul class="rslides" id="slider">
+	         <li>
+				  <img src="{% static 'team/images/bnr3.jpg' %}" alt="">
+				  <div class="banner-info">
+				  <h3>Football is Life</h3>
+				  <p>It requires perseverance, self-denial, hard work, sacrifice, dedication and respect for club and nation that we play for. 
+</p>
+				  </div>
+	         </li>
+	         <li>
+				 <img src="{% static 'team/images/g7.jpg' %}" alt="">
+	        	 <div class="banner-info">
+				  <h3>What is Football?</h3>
+				  <p>Football is about joy. It's about dribbling. I favour every idea that makes the game beautiful. Every good idea has to last.</p>
+				  </div>
+			 </li>
+	         <li>
+	             <img src="{% static 'team/images/bn07.jpg' %}" alt="">
+	        	 <div class="banner-info">
+				  <h3>What do you need?</h3>
+				  <p>Attitude is the liitle thing that makes a big difference between Footballing Success and Footballing failure</p>
+				  </div>
+	         </li>
+	         <li>
+				 <img src="{% static 'team/images/e3.jpg' %}" alt="">
+	        	 <div class="banner-info">
+				  <h3>A Beautiful Game</h3>
+				  <p>Everytime I step onto the pitch,all my troubles go away.The only thing that matters on the field is,a beautiful game</p>
+				  </div>
+			 </li>
+	      </ul>
+	  </div>
+  </div>
+<!---->
+				
+	 <!---start-content----->
+	 <div class="banner-bottom-grids">
+		 <div class="container">
+			 <div class="col-md-6 banner-text-info clr1">
+				 <i class="icon1"></i>
+				 <div class="bnr-text">	
+					<a href="{% url 'team:index' %}">
+					 <h3>TEAMS</h3>
+					 <p>This shows information about all the clubs that are participating in the League. </p>
+					</a>
+				 </div>
+			 </div>
+			 <div class="col-md-6 banner-text-info clr2">	
+				 <i class="icon4"></i>
+				 <div class="bnr-text">
+					 <h3>LEAGUE TABLE</h3>
+					 <p>Points obtained by all the teams in the League</p>
+				 </div>
+			 </div>
+			 <div class="clearfix"></div>
+			 
+			 <div class="col-md-6 banner-text-info clr3 btm">	
+				 <i class="icon3"></i>
+				 <div class="bnr-text">
+					 <h3>GALLERY</h3>
+					 <p>Captured moments during the match</p>
+				 </div>
+			 </div>
+			 <div class="col-md-6 banner-text-info clr4 btm">	
+				 <i class="icon2"></i>
+				 <div class="bnr-text">
+					 <h3>VIDEOS</h3>
+					 <p>Highlights of matches and some wonderful moments</p>
+				 </div>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!-- //banner -->
+
+<!-- content -->
+<div class="content">
+	 <div class="container">
+		 <div class="content-grids">
+			 <div class="col-md-4 content-grid1">
+				 <img src="images/g8.jpg" alt=""/>
+				 <h3>PLAYER STATS</h3>
+				 <p>Check out lists of Top Goal Scorer, Top Assist provider, Player with most number of Yellow cards and Red cards</p>
+				 <!--<a href="#">Read More..</a>-->
+			 </div>
+			 <div class="col-md-4 content-grid1">
+				<a href="#">
+				 <img src="images/bnr07.jpg" alt=""/>
+				 <h3>PLAYERS</h3>
+				 <p>Check out details of all the players </p>
+				</a>
+			 </div>
+			 <div class="col-md-4 content-grid1">
+				 <img src="images/coach.jpg" alt=""/>
+				 <h3>COACHES</h3>
+				 <p>Lists of all coaches present in the League</p>
+				 
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!--- //content--->
+<!-- content-bottom -->
+<div class="content-info">
+	 <div class="container">
+		 <div class="content-bottom-grids">
+			 <div class="col-md-4 popular">	
+				 <h3>NEWS & EVENTS</h3>
+				 <ul>
+					 <li><a href="#">El Classico fixture is revealed</a></li>
+					 <li><a href="#">Tickets soldout for Madrid Derby</a></li>
+					 <li><a href="#">FC Barcelona and Atetico Madrid played a draw match in Camp Nou </a></li>
+					 <li><a href="#">FC Sevilla doing great under Jorge samapoli</a></li>
+					 <li><a href="#">Is Celta capable to perform without the star man Nolito  </a></li>
+					 <li><a href="#">Real madrid drew with Villareal</a></li>
+					 <li><a href="#">FC Barcelona won against Athletico Bilbao </a></li>
+					 <li><a href="#">Real Madrid equalled consecutive record victory in Sports League</a></li>
+				 </ul>
+			 </div>
+			 <div class="col-md-4 welcome-pic">
+				 <h3>SPONSORS</h3>
+				 <h4></h4>
+				 <img src="images/s1.png" alt=""/>
+				 <p></p>
+			</div>
+			<div class="col-md-4 coach">
+				 <h3>OUR REFEREES</h3>
+				 <div class="coch-grid chr">
+					 <div class="coach-pic">
+						 <img src="images/r1.jpg" alt=""/>
+					 </div>
+					 <div class="coach-pic-info">
+						 <h4><a href="#">Carlos Clos Gomez</a></h4>
+						 <h5>Spain</h5>
+						 </div>
+					 <div class="clearfix"></div>
+				 </div>
+				 <div class="coch-grid">
+					 <div class="coach-pic">
+						 <img src="images/r2.jpg" alt=""/>
+					 </div>
+					 <div class="coach-pic-info">
+						 <h4><a href="#">Viccandi garrido</a></h4>
+						 <h5>Spain</h5>
+						 <!--<p>Donec ornare massa at velit fringilla, condimentum magna ornare tincidunt nulla dignissim.</p>-->
+					 </div>
+					 <div class="clearfix"></div>
+				 </div>
+			</div>
+			<div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!-- //content-bottom -->
+<!--footer-->
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			 <p>© 2016 All Rights Reseverd Design by Sushaanth P </p>
+		 </div>
+		 <div class="footer-menu">
+			 <ul>
+				 <li><a href="index.html">HOME</a></li>
+				 <li><a href="index.html">INSTITUTIONAL</a></li>
+				 <li><a href="index.html">FIXTURES</a></li>
+				 <li><a href="index.html">RESULTS</a></li>
+				 <li><a href="index.html">BROADCAST</a></li>
+				 <li><a href="index.html">CONTACT US</a></li>
+			 </ul>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!-- //footer -->
+</body>
+

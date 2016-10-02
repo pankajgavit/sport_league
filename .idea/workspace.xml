@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="">
+    <list default="true" id="013dbb00-b4ea-4e62-bf17-befcbb9c8714" name="Default" comment="09:50 02-10 added homepage">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/barca_logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/gareth.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/messi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/rm_logo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/ronaldo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/zinedine-zindane.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/responsiveslides.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/css/touchTouch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/static/home/js/responsiveslides.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/templates/home/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sport_league.iws" />
@@ -574,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475382022044</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="09:50 02-10 added homepage">
+      <created>1475382028931</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1475382028931</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
