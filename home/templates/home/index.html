@@ -127,15 +127,16 @@
 	 <div class="banner-bottom-grids">
 		 <div class="container">
 			 <div class="col-md-6 banner-text-info clr1">
+                 <a href="{% url 'team:index' %}">
 				 <i class="icon1"></i>
-				 <div class="bnr-text">	
-					<a href="{% url 'team:index' %}">
+				 <div class="bnr-text">
 					 <h3>TEAMS</h3>
 					 <p>This shows information about all the clubs that are participating in the League. </p>
 					</a>
 				 </div>
 			 </div>
-			 <div class="col-md-6 banner-text-info clr2">	
+			 <div class="col-md-6 banner-text-info clr2">
+                 <a href="#">
 				 <i class="icon4"></i>
 				 <div class="bnr-text">
 					 <h3>LEAGUE TABLE</h3>
@@ -144,14 +145,16 @@
 			 </div>
 			 <div class="clearfix"></div>
 			 
-			 <div class="col-md-6 banner-text-info clr3 btm">	
+			 <div class="col-md-6 banner-text-info clr3 btm">
+                 <a href="#">
 				 <i class="icon3"></i>
 				 <div class="bnr-text">
 					 <h3>GALLERY</h3>
 					 <p>Captured moments during the match</p>
 				 </div>
 			 </div>
-			 <div class="col-md-6 banner-text-info clr4 btm">	
+			 <div class="col-md-6 banner-text-info clr4 btm">
+                 <a href="#">
 				 <i class="icon2"></i>
 				 <div class="bnr-text">
 					 <h3>VIDEOS</h3>
@@ -169,20 +172,20 @@
 	 <div class="container">
 		 <div class="content-grids">
 			 <div class="col-md-4 content-grid1">
-				 <img src="images/g8.jpg" alt=""/>
+				 <img src="{% static 'team/images/g8.jpg' %}" alt=""/>
 				 <h3>PLAYER STATS</h3>
 				 <p>Check out lists of Top Goal Scorer, Top Assist provider, Player with most number of Yellow cards and Red cards</p>
 				 <!--<a href="#">Read More..</a>-->
 			 </div>
 			 <div class="col-md-4 content-grid1">
 				<a href="#">
-				 <img src="images/bnr07.jpg" alt=""/>
+				 <img src="{% static 'team/images/bnr07.jpg' %}" alt=""/>
 				 <h3>PLAYERS</h3>
 				 <p>Check out details of all the players </p>
 				</a>
 			 </div>
 			 <div class="col-md-4 content-grid1">
-				 <img src="images/coach.jpg" alt=""/>
+				 <img src="{% static 'team/images/coach.jpg' %}" alt=""/>
 				 <h3>COACHES</h3>
 				 <p>Lists of all coaches present in the League</p>
 				 
@@ -212,14 +215,14 @@
 			 <div class="col-md-4 welcome-pic">
 				 <h3>SPONSORS</h3>
 				 <h4></h4>
-				 <img src="images/s1.png" alt=""/>
+				 <img src="{% static 'team/images/s1.png' %}" alt=""/>
 				 <p></p>
 			</div>
 			<div class="col-md-4 coach">
 				 <h3>OUR REFEREES</h3>
 				 <div class="coch-grid chr">
 					 <div class="coach-pic">
-						 <img src="images/r1.jpg" alt=""/>
+						 <img src="{% static 'team/images/r1.jpg' %}" alt=""/>
 					 </div>
 					 <div class="coach-pic-info">
 						 <h4><a href="#">Carlos Clos Gomez</a></h4>
@@ -229,7 +232,7 @@
 				 </div>
 				 <div class="coch-grid">
 					 <div class="coach-pic">
-						 <img src="images/r2.jpg" alt=""/>
+						 <img src="{% static 'team/images/r2.jpg' %}" alt=""/>
 					 </div>
 					 <div class="coach-pic-info">
 						 <h4><a href="#">Viccandi garrido</a></h4>
@@ -252,12 +255,12 @@
 		 </div>
 		 <div class="footer-menu">
 			 <ul>
-				 <li><a href="index.html">HOME</a></li>
-				 <li><a href="index.html">INSTITUTIONAL</a></li>
-				 <li><a href="index.html">FIXTURES</a></li>
-				 <li><a href="index.html">RESULTS</a></li>
-				 <li><a href="index.html">BROADCAST</a></li>
-				 <li><a href="index.html">CONTACT US</a></li>
+				 <li><a href="{% url 'home:index' %}">HOME</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'home:index'%}">FIXTURES</a></li>
+				 <li><a href="{% url 'home:index'%}">RESULTS</a></li>
+				 <li><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>
