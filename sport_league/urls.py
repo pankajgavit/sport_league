@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^video/', include('video.urls')),
     url(r'^team/', include('team.urls')),
+    url(r'^matches/', include('matches.urls')),
 ]
 
 if settings.DEBUG:

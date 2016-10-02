@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
+    'matches.apps.MatchesConfig',
     'video.apps.VideoConfig',
     'team.apps.TeamConfig',
     'django.contrib.admin',
