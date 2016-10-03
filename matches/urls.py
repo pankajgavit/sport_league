@@ -5,7 +5,9 @@ app_name = 'matches'
 
 
 urlpatterns = [
-    #/team/
+    #/matches/
     url(r'^$', views.index, name='index'),
 
+    #/matches/fixtures/
+    url(r'^fixtures', views.fixtures, name='fixtures'),
 ]

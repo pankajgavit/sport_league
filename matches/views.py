@@ -7,3 +7,7 @@ from .models import Matches
 def index(request):
     all_matches = Matches.objects.all()
     return render(request, 'matches/index.html',{'all_matches' : all_matches})
+
+def fixtures(request):
+    all_matches = Matches.objects.all()
+    return render(request, 'matches/fixtures.html',{'all_matches' : all_matches})

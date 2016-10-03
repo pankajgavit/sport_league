@@ -6,10 +6,14 @@ from team.models import Team
 class Matches(models.Model):
     home = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="home")
     away = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="away")
-    result = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="match_result")
+    result = models.IntegerField(default=0)
+    result_team = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="match_result", null="False")
+    home_goals = models.IntegerField(default=0)
+    away_goals = models.IntegerField(default=0)
     video = models.CharField(max_length=2000, null=True)
 
-    def __str__(self):#if the home team and away team are same
+    def __str__(self):
+        #if the home team and away team are same
         '''if(self.away_id==self.home_id):
             return 'Same teams cannot play against each other..!! Are you kidding me..? '
 
