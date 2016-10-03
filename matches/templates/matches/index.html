@@ -19,9 +19,18 @@
 			});
 		</script>
 
-
+<style>
+    .divider {
+  height: 3px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+</style>
 <head>
-	<title>Soccer a Sports Category Flat Bootstrap Responsive Website Template | Events :: w3layouts</title>
+	<title>Results</title>
 </head>
 
 <body>
@@ -29,17 +38,17 @@
 <div class="header">
 	 <div class="container">
 		 <div class="logo">
-			   <h1><a href="index.html">SPORTS LEAGUE</a></h1>
+			   <h1><a href="{% url 'home:index' %}">SPORTS LEAGUE</a></h1>
 		 </div>
 		 <div class="top-menu">
 			 <span class="menu"></span>
 			  <ul>
-				  <li class="active"><a href="index.html">HOME</a></li>
-				 <li><a href="institutional.html">INSTITUTIONAL</a></li>
-				 <li><a href="fixtures.html">FIXTURES</a></li>
-				 <li><a href="results.html">RESULTS</a></li>
-				 <li ><a href="broadcast.html">BROADCAST</a></li>
-				 <li><a href="contact.html">CONTACT US</a></li>
+				  <li class="active"><a href="{% url 'home:index' %}">HOME</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
+				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
+				 <li ><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <!-- script-for-menu -->
@@ -78,15 +87,14 @@
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-		  <li><a href="{% url 'team:index' %}">Team</a></li>
-             <li class="active">{{ team.team_name }}</li>
+             <li class="active"><a href="{% url 'matches:index' %}">Fixtures</a></li>
 		 </ol>
 
 
 <div class="gallery-text">
 		 <div class="container">
-		 <h2>{{ team.team_name }}</h2>
-		 <p>Players in the {{ team.team_name }} are as follows:</p>
+		 <h2>Results</h2>
+		 <p>Matches in the League are as follows:</p>
 		 </div>
 </div>
 </div>
@@ -97,31 +105,33 @@
 
                {% for matches in all_matches %}
                    <div class="pull-left col-sm-4 " id="ash">
-                   <p>
+                   <p class=" text-center">
                         <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center" >{{ matches.home.team_name }}</div>
+                        {{ matches.home.team_name }}
                         </p>
                       </div>
 
-                   <div  class="pull-left col-sm-4 center-block" id="ash" >
-                      <p class="text-center">
+                   <div  class="pull-left col-sm-4 " id="ash" >
+                      <h1 class="text-center">
                           VS
-                        </p>
+                        </h1>
                  </div>
 
                  <div  class="pull-left col-sm-4 " id="ash" >
-                      <p>
+                      <p class="text-center">
                         <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center">{{ matches.away.team_name }}<br>
-                        <br>
-                        <br>
-                        </div>
+                        {{ matches.away.team_name }}
                         </p>
                  </div>
+
+                   <div>
+                   <p class="text-center ">The link to the above match highlight is as follows : <a href="{{ matches.video }}" target="_blank">Click Here</a></p>
+                   <p class="divider"></p><br><br>
+                   </div>
                     {% endfor %}
 
 			  </section>
-			 <div class="clearfix"> </div>
+			 <div class="clearfix " > </div>
 		  </div>
          </div>
 </div>
@@ -134,12 +144,12 @@
 		 </div>
 		 <div class="footer-menu">
 			 <ul>
-				 <li><a href="index.html">HOME</a></li>
-				 <li><a href="index.html">INSTITUTIONAL</a></li>
-				 <li><a href="index.html">FIXTURES</a></li>
-				 <li><a href="index.html">RESULTS</a></li>
-				 <li class="active"><a href="index.html">BROADCAST</a></li>
-				 <li><a href="index.html">CONTACT US</a></li>
+				 <li><a href="{% url 'home:index' %}">HOME</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
+				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
+				 <li class="active"><a href="{% url 'home:index' %}l">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>

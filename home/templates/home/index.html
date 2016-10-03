@@ -34,11 +34,11 @@
 			 <span class="menu"></span>
 			  <ul>
 				 <li class="active"><a href="index.html">HOME</a></li>
-				 <li><a href="institutional.html">INSTITUTIONAL</a></li>
-				 <li><a href="fixtures.html">FIXTURES</a></li>
-				 <li><a href="results.html">RESULTS</a></li>
-				 <li><a href="broadcast.html">BROADCAST</a></li>
-				 <li><a href="contact.html">CONTACT US</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
+				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
+				 <li><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>			 
 		 </div>			
 		 <!-- script-for-menu -->
@@ -258,7 +258,7 @@
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
 				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'home:index'%}">FIXTURES</a></li>
-				 <li><a href="{% url 'home:index'%}">RESULTS</a></li>
+				 <li><a href="{% url 'matches:index'%}">RESULTS</a></li>
 				 <li><a href="{% url 'home:index' %}">BROADCAST</a></li>
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
