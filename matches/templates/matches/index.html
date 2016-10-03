@@ -107,8 +107,10 @@
                {% for matches in all_matches %}
                    <div class="pull-left col-sm-4 " id="ash">
                    <p class=" text-center">
-                        <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
-                        {{ matches.home.team_name }}
+                        <a href="/team/{{ matches.home.id }}/">
+                            <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
+                            {{ matches.home.team_name }}
+                        </a>
                         </p>
                       </div>
 
@@ -120,8 +122,10 @@
 
                  <div  class="pull-left col-sm-4 " id="ash" >
                       <p class="text-center">
-                        <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
-                        {{ matches.away.team_name }}
+                        <a href="/team/{{ matches.away.id }}/">
+                            <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
+                            {{ matches.away.team_name }}
+                        </a>
                         </p>
                  </div>
 
