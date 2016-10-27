@@ -7,4 +7,4 @@ class Videos(models.Model):
     youtube_embedded_url = models.CharField(max_length=2000)
 
     def __str__(self):
-        return self.video_title
+        return self.video_title + self.youtube_embedded_url
