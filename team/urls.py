@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from .  import views
+from . import views
 
 app_name = 'team'
 
@@ -10,4 +10,8 @@ urlpatterns = [
 
     #/team/712/
     url(r'^(?P<team_id>[0-9]+)/$', views.detail , name='detail'),
+
+    # /team/standings/
+    url(r'^standings', views.standings, name='standings'),
+
 ]

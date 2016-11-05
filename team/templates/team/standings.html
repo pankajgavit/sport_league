@@ -88,23 +88,32 @@
 	 <div class="social">
          <div class="gallery-text">
              <div class="container">
-                 <h2>Highlights of previous matches</h2>
+                 <h2>Team Standings</h2>
 
 
-             <div class="row">
-                <div class="col-md-10"><br><br>
+             <div class="row" style="background-color: lavender">
+                <div class="col-md-10">
+                    <h3>Sports League  <small>First Edition</small></h3><br>
+                    <table>
+                        <tr>
+                            <th class="col-xs-3">Team</th>
+                            <th>Wins</th>
+                            <th>Losses</th>
+                            <th>Ties</th>
+                            <th>Total Points</th>
+                        </tr>
 
-                    {% for matches in all_matches %}
-                        <h3>{{ matches.home }} &emsp; <small>VS</small> &emsp; {{ matches.away }} </h3><br>
-                        <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/{{ matches.video }}"
-                                frameborder="0" allowfullscreen>
-
-                        </iframe>
-                        <p class="divider"></p>
-                        <br><br><br><br>
-                    {% endfor %}
-
+                        {% for teams in all_teams %}
+                            <tr>
+                                <td class="col-xs-3">{{ teams.team_name }}</td>
+                                <td>{{ teams.wins }}</td>
+                                <td>{{ teams.loss }}</td>
+                                <td>{{ teams.ties }}</td>
+                                <td>{{ teams.points }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    <br><br><br>
                 </div>
 
              </div>

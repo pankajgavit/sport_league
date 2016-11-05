@@ -12,3 +12,7 @@ def index(request):
 def detail(request, team_id):
     team = Team.objects.get(pk=team_id)
     return render(request, 'team/player.html',{'team': team})
+
+def standings(request):
+    all_teams = Team.objects.all()
+    return render(request, 'team/standings.html',{'all_teams' : all_teams})

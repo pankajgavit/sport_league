@@ -24,6 +24,16 @@
 	<title>Sports League</title>
 </head>
 <body>
+
+
+<!--To put a video background in the website>
+
+<!--div style=" z-index: -99; width: 100%; height: 100%">
+  <iframe frameborder="0" height="100%" width="100%"
+    src="https://youtube.com/embed/g3MBSnnD6k8?autoplay=1&controls=0&showinfo=0&autohide=1">
+  </iframe>
+</div-->
+
 <!-- header -->
 <div class="header">
 	 <div class="container">
@@ -88,6 +98,7 @@
 
  <div class="slider">
 	  <div class="callbacks_container">
+
 	     <ul class="rslides" id="slider">
 	         <li>
 				  <img src="{% static 'team/images/bnr3.jpg' %}" alt="">
@@ -132,16 +143,17 @@
 				 <div class="bnr-text">
 					 <h3>TEAMS</h3>
 					 <p>This shows information about all the clubs that are participating in the League. </p>
-					</a>
 				 </div>
+                 </a>
 			 </div>
 			 <div class="col-md-6 banner-text-info clr2">
-                 <a href="#">
+                 <a href="{% url 'team:standings' %}">
 				 <i class="icon4"></i>
 				 <div class="bnr-text">
 					 <h3>LEAGUE TABLE</h3>
 					 <p>Points obtained by all the teams in the League</p>
 				 </div>
+                 </a>
 			 </div>
 			 <div class="clearfix"></div>
 			 
@@ -152,14 +164,16 @@
 					 <h3>GALLERY</h3>
 					 <p>Captured moments during the match</p>
 				 </div>
+                 </a>
 			 </div>
 			 <div class="col-md-6 banner-text-info clr4 btm">
-                 <a href="#">
+                 <a href="{% url 'video:index' %}">
 				 <i class="icon2"></i>
 				 <div class="bnr-text">
 					 <h3>VIDEOS</h3>
 					 <p>Highlights of matches and some wonderful moments</p>
 				 </div>
+                 </a>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>
