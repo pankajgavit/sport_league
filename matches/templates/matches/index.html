@@ -1,4 +1,4 @@
-{% load staticfiles %}
+    {% load staticfiles %}
         <link rel="icon" href="{% static 'team/images/soccer.png' %}">
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
@@ -20,6 +20,20 @@
 			});
 		</script>
 
+<!-- script to toggle the highlights video -->
+<script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else {
+           e.style.display = 'block';
+       }
+    }
+//-->
+</script>
+
 <style>
     .divider {
   height: 3px;
@@ -35,6 +49,7 @@
 </head>
 
 <body>
+<div class="complete-body">
 <!-- header -->
 <div class="header">
 	 <div class="container">
@@ -106,39 +121,45 @@
 
                {% for matches in all_matches %}
                    {% if matches.result == 1 or matches.result == 2 %}
-                   <div class="pull-left col-sm-4 " id="ash">
-                   <p class=" text-center">
-                        <a href="/team/{{ matches.home.id }}/">
-                            <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
-                            {{ matches.home.team_name }}
-                        </a>
-                        </p>
-                      </div>
+                        <div class="pull-left col-sm-4 " id="ash">
+                           <p class=" text-center">
+                                <a href="/team/{{ matches.home.id }}/">
+                                    <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
+                                    {{ matches.home.team_name }}
+                                </a>
+                           </p>
+                           </div>
 
-                   <div  class="pull-left col-sm-4 " id="ash" >
-                      <h1 class="text-center">
-                          VS
-                        </h1>
-                 </div>
+                           <div  class="pull-left col-sm-4 " id="ash" >
+                              <h1 class="text-center">
+                                  VS
+                                </h1>
+                           </div>
 
-                 <div  class="pull-left col-sm-4 " id="ash" >
-                      <p class="text-center">
-                        <a href="/team/{{ matches.away.id }}/">
-                            <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
-                            {{ matches.away.team_name }}
-                        </a>
-                        </p>
-                 </div>
-                   <div>
-                   <p class="text-center ">The link to the above match highlight is as follows : <a href="{{ matches.video }}" target="_blank">Click Here</a></p>
-                   <p class="divider"></p><br><br>
-                   </div>
+                           <div  class="pull-left col-sm-4 " id="ash" >
+                              <p class="text-center">
+                                <a href="/team/{{ matches.away.id }}/">
+                                    <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
+                                    {{ matches.away.team_name }}
+                                </a>
+                              </p>
+                           </div>
+
+                        <div class="text-center" id="ash">
+                                <iframe class="text-center" id="{{ matches.video }}" style="display: none" width="560" height="315"
+                                       src="{{ matches.video }}"
+                                       frameborder="0" allowfullscreen>
+                                </iframe>
+                            <button onclick="toggle_visibility('{{ matches.video }}');">Highlights</button>
+                        </div>
+
+                       <p class="divider"></p><br><br>
+
                 {% endif %}
                {% endfor %}
 
 			  </section>
-			 <div class="clearfix " > </div>
-		  </div>
+         </div>
          </div>
 </div>
 <!--footer-->
@@ -162,6 +183,7 @@
 	 </div>
 </div>
 <!-- //footer -->
+</div>
 </body>
 
 
