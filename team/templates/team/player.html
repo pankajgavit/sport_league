@@ -100,8 +100,9 @@
                    <p>
                         <img src='{{ player.coach_image.url }}'  class="img-responsive center-block" alt="" >
                         <div class="navbar-text text-center" >{{ player.coach_name }}<br>
-                            <br>
+                        <div style="font-size: small"><b>Country</b> - {{ player.country }}. <b>DOB</b> - {{ player.DOB }}
                         <br>
+                            </div>
                         </div>
                         </p>
                       </div>
@@ -112,8 +113,9 @@
                       <p>
                         <img src='{{ player.player_image.url }}'  class="img-responsive center-block" alt="" >
                         <div class="navbar-text text-center">{{ player.player_name }}<br>
+                        <div style="font-size: small"><b>Role</b> - {{ player.Role }}. <b>DOB</b> - {{ player.DOB }}
                         <br>
-                        <br>
+                            </div>
                         </div>
                         </p>
                  </div>
