@@ -24,6 +24,11 @@ class Player(models.Model):
     Role = models.CharField(max_length=50)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
     player_image = models.FileField()
+    goals = models.IntegerField(default = 0)
+    assists = models.IntegerField(default = 0)
+    yellow_card = models.IntegerField(default = 0)
+    red_card = models.IntegerField(default = 0)
+    Rating = models.IntegerField(default = 0)
 
     def __str__(self):
         return self.player_name

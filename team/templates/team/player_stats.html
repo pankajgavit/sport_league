@@ -80,50 +80,37 @@
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
 		  <li><a href="{% url 'team:index' %}">Team</a></li>
-             <li class="active">{{ team.team_name }}</li>
+             <li><a href="/team/{{ team.id }}">{{ team.team_name }}</a></li>
+             <li class="active">{{ player.player_name }}</li>
 		 </ol>
 </div>
 
 <div class="gallery-text">
 		 <div class="container">
-		 <h2>{{ team.team_name }}</h2>
-		 <p>Players in the {{ team.team_name }} are as follows:</p>
+		 <h2>{{ player.player_name }}</h2>
+		 <h3>Stats</h3>
 		 </div>
 </div>
 <div class="container">
 		 <div class="main" >
 		 <div class="gallery" >
-			  <section class="row">
-
-               {% for player in team.coach_set.all %}
-                   <div class="pull-left col-sm-3 " id="ash">
-                   <p>
-                        <img src='{{ player.coach_image.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center" >{{ player.coach_name }}<br>
-                        <div style="font-size: small"><b>Country</b> - {{ player.country }}. <b>DOB</b> - {{ player.DOB }}
-                        <br>
-                            </div>
-                        </div>
-                        </p>
-                      </div>
-                    {% endfor %}
-
-             {% for player in team.player_set.all %}
-                 <div  class="pull-left col-sm-3 " id="ash" >
-                 <a href="/team/{{ team.id }}/{{ player.id }}">
-                      <p>
-                        <img src='{{ player.player_image.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center">{{ player.player_name }}<br>
-                     <div style="font-size: small"><b>Role</b> - {{ player.Role }}. <b>DOB</b> - {{ player.DOB }}
-                        <br>
-                            </div>
-                        </div>
-                        </p>
-                     </a>
+             <div style="float: left">
+                        <img src='{{ player.player_image.url }}'  class=" " alt="" style="margin-left: 100px"><br>
                  </div>
-                    {% endfor %}
+                        <div class="navbar-text text-left " style="float: left ;font-size: xx-large;margin-left: 100px" ><b>{{ player.player_name }}</b><br>
+                        <div style="font-size: xx-large">
+                            <b>Team</b>  &emsp;&emsp;&emsp;&emsp;: &emsp;{{ team.team_name }} <br>
+                            <b>Role</b>  &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.Role }}<br>
+                            <b>DOB</b>  &emsp;&emsp;&emsp;&emsp;&nbsp;: &emsp;{{ player.DOB }} <br>
+                            <b>Ratings</b> &emsp;&emsp;&emsp;&nbsp;: &emsp;{{ player.Rating }}<br>
+                            <b>Goals</b>  &emsp;&emsp;&emsp;&emsp;: &emsp;{{ player.goals }} <br>
+                            <b>Assists</b>  &emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.assists }} <br>
+                            <b>Yellow Cards</b>  &nbsp;&nbsp;&nbsp;&nbsp;: &emsp;{{ player.yellow_card }} <br>
+                            <b>Red Cards</b>  &emsp;&emsp;: &emsp;{{ player.red_card }} <br>
+                        <br>
+                            </div>
+                        </div>
 
-			  </section>
 			 <div class="clearfix"> </div>
 		  </div>
          </div>
