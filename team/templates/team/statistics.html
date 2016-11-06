@@ -1,0 +1,250 @@
+{% load staticfiles %}
+		<link rel="icon" href="{% static 'team/images/soccer.png' %}">
+        <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'team/css/touchTouch.css' %}" type="text/css" media="all" />
+		<link href="{% static 'team/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{% static 'team/css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="soccer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+	   <script type="text/javascript">
+			$(document).ready(function() {
+				$('.fancybox').fancybox();
+			});
+		</script>
+
+
+<head>
+	<title>Teams Standings</title>
+</head>
+
+<body>
+<!-- header -->
+<div class="header">
+	 <div class="container">
+		 <div class="logo">
+			   <h1><a href="{% url 'home:index' %}">SPORTS LEAGUE</a></h1>
+		 </div>
+		 <div class="top-menu">
+			 <span class="menu"></span>
+			  <ul>
+				  <li class="active"><a href="{% url 'home:index' %}">HOME</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
+				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
+				 <li ><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
+
+
+			 </ul>
+		 </div>
+		 <!-- script-for-menu -->
+		 <script>
+				$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+				});
+		 </script>
+		 <!-- script-for-menu -->
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+<!-- //header -->
+<!-- banner -->
+<div class="strip">
+	 <div class="container">
+	 <div class="search">
+		    <form>
+		    	<input type="text" value="" placeholder="Search...">
+				<input type="submit" value="">
+			</form>
+     </div>
+	 <div class="social">
+			 <a href="#"><i class="fa fa-lg fa-facebook"></i></a>
+			 <a href="#"><i class="fa fa-lg fa-twitter"></i></a>
+
+			 <a href="#"><i class="fa fa-lg fa-google-plus"></i></a>
+			 <a href="#"><i class="fa fa-lg fa-youtube"></i></a>
+	 </div>
+		<div class="clearfix"></div>
+		</div>
+</div>
+<!-- banner -->
+<!-- //header -->
+<div class="container">
+		 <ol class="breadcrumb">
+		  <li><a href="{% url 'home:index' %}">Home</a></li>
+		  <li class="active">Team</li>
+		 </ol>
+
+<body>
+
+<h2>Statistics</h2>
+<script>
+$(document).ready(function () {
+    $('.nav li a').click(function(e) {
+
+        $('.nav li').removeClass('active');
+
+        var $parent = $(this).parent();
+        if (!$parent.hasClass('active')) {
+            $parent.addClass('active');
+        }
+        e.preventDefault();
+    });
+});
+</script>
+
+<ul class="nav nav-tabs tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'tabs-1')">Top Goals</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'tabs-2')">Top Assists</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'tabs-3')">Most Yellow Cards</a></li>
+    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'tabs-4')">Most Red Cards</a></li>
+</ul>
+
+<div id="tabs-1" class="tabcontent">
+ <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Goals</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for player_goals in all_player_goals %}
+    <tr>
+      <th scope="row">{{ forloop.counter}}</th>
+      <td>{{ player_goals.player_name }}</td>
+      <td>{{ player_goals.team }}</td>
+      <td>{{ player_goals.goals }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<div id="tabs-2" class="tabcontent">
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Assists</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for player_assist in all_player_assists %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ player_assist.player_name }}</td>
+      <td>{{ player_assist.team }}</td>
+      <td>{{ player_assist.assists }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<div id="tabs-3" class="tabcontent">
+  <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Yellow Cards</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for player_yellow in all_player_yellow %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ player_yellow.player_name }}</td>
+      <td>{{ player_yellow.team }}</td>
+      <td>{{ player_yellow.yellow_card }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<div id="tabs-4" class="tabcontent">
+ <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>No.</th>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Red Cards</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player_red in all_player_red %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ player_red.player_name }}</td>
+      <td>{{ player_red.team }}</td>
+      <td>{{ player_red.red_card }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<!--footer-->
+<br>
+<br>
+<div class="footer">
+	 <div class="container">
+		 <div class="copywrite">
+			<span></span>
+			 <p>© 2016 All Rights Reseverd Design by Sushaanth P</p>
+		 </div>
+		 <div class="footer-menu">
+			 <ul>
+				 <li><a href="{% url 'home:index' %}">HOME</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
+				 <li><a href="{% url 'matches:index' %}l">RESULTS</a></li>
+				 <li class="active"><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
+			 </ul>
+		 </div>
+		 <div class="clearfix"></div>
+	 </div>
+</div>
+     </div>
+<!-- //footer -->
+</body>
+
+
+
+
+
+

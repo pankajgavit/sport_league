@@ -15,6 +15,9 @@ urlpatterns = [
     # /team/standings/
     url(r'^standings', views.standings, name='standings'),
 
+    # /team/statistics
+    url(r'^statistics', views.statistics, name='statistics'),
+
     # /team/coach/
     url(r'^coach', views.coach, name='coach'),
 

@@ -20,6 +20,15 @@ def standings(request):
     return render(request, 'team/standings.html',{'all_teams' : all_teams})
 
 
+def statistics(request):
+    all_player_goals = Player.objects.order_by('-goals')[:20]
+    all_player_assists = Player.objects.order_by('-assists')[:20]
+    all_player_yellow = Player.objects.order_by('-yellow_card')[:20]
+    all_player_red = Player.objects.order_by('-red_card')[:20]
+    return render(request, 'team/statistics.html',{'all_player_goals' : all_player_goals, 'all_player_assists' : all_player_assists,
+                                                  'all_player_yellow': all_player_yellow,'all_player_red' : all_player_red})
+
+
 def coach(request):
     all_coach = Coach.objects.order_by('coach_team')
     return render(request, 'team/coach.html',{'all_coach' : all_coach})
