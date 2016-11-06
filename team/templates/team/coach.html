@@ -79,38 +79,38 @@
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-		  <li><a href="{% url 'team:index' %}">Team</a></li>
-             <li><a href="/team/{{ team.id }}">{{ team.team_name }}</a></li>
-             <li class="active">{{ player.player_name }}</li>
+             <li class="active">Coaches</li>
 		 </ol>
 </div>
 
 <div class="gallery-text">
 		 <div class="container">
-		 <h2>{{ player.player_name }}</h2>
-		 <h3>Stats</h3>
+		 <h2>Coaches</h2>
 		 </div>
 </div>
 <div class="container">
 		 <div class="main" >
 		 <div class="gallery" >
-             <div style="float: left">
-                        <img src='{{ player.player_image.url }}'  class=" " alt="" style="margin-left: 100px"><br>
-                 </div>
-                        <div class="navbar-text text-left " style="float: left ;font-size: xx-large;margin-left: 100px" ><b>{{ player.player_name }}</b><br>
-                        <div style="font-size: xx-large">
-                            <b>Team</b>  &emsp;&emsp;&emsp;&emsp;: &emsp;{{ player.team }} <br>
-                            <b>Role</b>  &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.Role }}<br>
-                            <b>DOB</b>  &emsp;&emsp;&emsp;&emsp;&nbsp;: &emsp;{{ player.DOB }} <br>
-                            <b>Ratings</b> &emsp;&emsp;&emsp;&nbsp;: &emsp;{{ player.Rating }}<br>
-                            <b>Goals</b>  &emsp;&emsp;&emsp;&emsp;: &emsp;{{ player.goals }} <br>
-                            <b>Assists</b>  &emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.assists }} <br>
-                            <b>Yellow Cards</b>  &nbsp;&nbsp;&nbsp;&nbsp;: &emsp;{{ player.yellow_card }} <br>
-                            <b>Red Cards</b>  &emsp;&emsp;: &emsp;{{ player.red_card }} <br>
+			  <section class="row">
+
+               {% for coach in all_coach %}
+                   <div class="pull-left col-sm-3 " id="ash">
+                   <p>
+                        <img src='{{ coach.coach_image.url }}'  class="img-responsive center-block" alt="" >
+                        <div class="navbar-text text-center" ><b>{{ coach.coach_name }}</b><br>
+                        <div class="text-left">
+                            <b>Coaching Team</b> &nbsp;&nbsp;- &ensp;{{ coach.coach_team }}<br>
+                            <b>Country</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp; - &ensp;{{ coach.country }}<br>
+                            <b>DOB</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp; - &ensp;{{ coach.DOB }}<br>
+                            <b>Joining Date</b> &ensp;&ensp;&ensp;&nbsp;- &ensp;{{ coach.start_date }}<br>
                         <br>
                             </div>
                         </div>
+                        </p>
+                      </div>
+                    {% endfor %}
 
+			  </section>
 			 <div class="clearfix"> </div>
 		  </div>
          </div>

@@ -1,5 +1,5 @@
 {% load staticfiles %}
-        <link rel="icon" href="{{ team.logo.url }}">
+		<link rel="icon" href="{% static 'team/images/soccer.png' %}">
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -13,7 +13,7 @@
 		<meta name="keywords" content="soccer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
-	    <script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+	<script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
 	   <script type="text/javascript">
 			$(document).ready(function() {
 				$('.fancybox').fancybox();
@@ -22,7 +22,7 @@
 
 
 <head>
-	<title>{{ team.team_name }} Squad </title>
+	<title>Sports League Teams</title>
 </head>
 
 <body>
@@ -41,6 +41,8 @@
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
 				 <li ><a href="{% url 'home:index' %}">BROADCAST</a></li>
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
+
+
 			 </ul>
 		 </div>
 		 <!-- script-for-menu -->
@@ -79,42 +81,40 @@
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-		  <li><a href="{% url 'team:index' %}">Team</a></li>
-             <li><a href="/team/{{ team.id }}">{{ team.team_name }}</a></li>
-             <li class="active">{{ player.player_name }}</li>
+		  <li class="active">Team</li>
 		 </ol>
+
+
+	 <div class="social">
+         <div class="gallery-text">
+		 <div class="container">
+		 <h2>Sports League Teams</h2>
+		 <p>Teams in the league is shown as below:<br>Click on the particular team to explore more about the players.</p>
+                 </div>
+        </div>
+     </div>
 </div>
 
-<div class="gallery-text">
-		 <div class="container">
-		 <h2>{{ player.player_name }}</h2>
-		 <h3>Stats</h3>
-		 </div>
-</div>
+
 <div class="container">
 		 <div class="main" >
-		 <div class="gallery" >
-             <div style="float: left">
-                        <img src='{{ player.player_image.url }}'  class=" " alt="" style="margin-left: 100px"><br>
-                 </div>
-                        <div class="navbar-text text-left " style="float: left ;font-size: xx-large;margin-left: 100px" ><b>{{ player.player_name }}</b><br>
-                        <div style="font-size: xx-large">
-                            <b>Team</b>  &emsp;&emsp;&emsp;&emsp;: &emsp;{{ player.team }} <br>
-                            <b>Role</b>  &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.Role }}<br>
-                            <b>DOB</b>  &emsp;&emsp;&emsp;&emsp;&nbsp;: &emsp;{{ player.DOB }} <br>
-                            <b>Ratings</b> &emsp;&emsp;&emsp;&nbsp;: &emsp;{{ player.Rating }}<br>
-                            <b>Goals</b>  &emsp;&emsp;&emsp;&emsp;: &emsp;{{ player.goals }} <br>
-                            <b>Assists</b>  &emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.assists }} <br>
-                            <b>Yellow Cards</b>  &nbsp;&nbsp;&nbsp;&nbsp;: &emsp;{{ player.yellow_card }} <br>
-                            <b>Red Cards</b>  &emsp;&emsp;: &emsp;{{ player.red_card }} <br>
+		 <div class="gallery">
+			  <section class="row">
+                  {% for gallery in all_gallery %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
                         <br>
-                            </div>
-                        </div>
-
+                        <br>
+                  <span> </span>
+                  </ul>
+                  {% endfor %}
+			  </section>
 			 <div class="clearfix"> </div>
 		  </div>
          </div>
 </div>
+
+
 <!--footer-->
 <div class="footer">
 	 <div class="container">
@@ -127,15 +127,20 @@
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
 				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
-				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
-				 <li class="active"><a href="{% url 'home:index' %}l">BROADCAST</a></li>
+				 <li><a href="{% url 'matches:index' %}l">RESULTS</a></li>
+				 <li class="active"><a href="{% url 'home:index' %}">BROADCAST</a></li>
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>
 	 </div>
 </div>
+     </div>
 <!-- //footer -->
 </body>
+
+
+
+
 
 

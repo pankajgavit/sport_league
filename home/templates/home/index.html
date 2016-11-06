@@ -158,7 +158,7 @@
 			 <div class="clearfix"></div>
 			 
 			 <div class="col-md-6 banner-text-info clr3 btm">
-                 <a href="#">
+                 <a href="{% url 'gallery:index' %}">
 				 <i class="icon3"></i>
 				 <div class="bnr-text">
 					 <h3>GALLERY</h3>
@@ -186,11 +186,12 @@
 	 <div class="container">
 		 <div class="content-grids">
 			 <div class="col-md-4 content-grid1">
+                 <a href="{% url 'team:statistics' %}">
 				 <img src="{% static 'team/images/g8.jpg' %}" alt=""/>
 				 <h3>PLAYER STATS</h3>
 				 <p>Check out lists of Top Goal Scorer, Top Assist provider, Player with most number of Yellow cards and Red cards</p>
-				 <!--<a href="#">Read More..</a>-->
-			 </div>
+			    </a>
+             </div>
 			 <div class="col-md-4 content-grid1">
 				<a href="{% url 'team:index' %}">
 				 <img src="{% static 'team/images/bnr07.jpg' %}" alt=""/>
@@ -199,10 +200,11 @@
 				</a>
 			 </div>
 			 <div class="col-md-4 content-grid1">
+                 <a href="{% url 'team:coach' %}">
 				 <img src="{% static 'team/images/coach.jpg' %}" alt=""/>
 				 <h3>COACHES</h3>
 				 <p>Lists of all coaches present in the League</p>
-				 
+				 </a>
 			 </div>
 			 <div class="clearfix"></div>
 		 </div>
