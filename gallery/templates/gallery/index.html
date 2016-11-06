@@ -102,10 +102,11 @@
 		 <div class="main" >
 		 <div class="gallery">
 			  <section class="row">
-                  {% for
-                  in all_gallery %}
+                  {% for gallery in all_gallery %}
 				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                      <a href="{{ gallery.gallery.url }}">
                       <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
                         <br>
                         <br>
                   <span> </span>
