@@ -79,15 +79,13 @@
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-		  <li><a href="{% url 'team:index' %}">Team</a></li>
-             <li class="active">{{ team.team_name }}</li>
+             <li class="active">Coaches</li>
 		 </ol>
 </div>
 
 <div class="gallery-text">
 		 <div class="container">
-		 <h2>{{ team.team_name }}</h2>
-		 <p>Players in the {{ team.team_name }} are as follows:</p>
+		 <h2>Coaches</h2>
 		 </div>
 </div>
 <div class="container">
@@ -95,20 +93,21 @@
 		 <div class="gallery" >
 			  <section class="row">
 
-             {% for player in team.player_set.all %}
-                 <div  class="pull-left col-sm-3 " id="ash" >
-                 <a href="/team/{{ team.id }}/{{ player.id }}">
-                      <p>
-                        <img src='{{ player.player_image.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center">{{ player.player_name }}<br>
-                     <div style="font-size: small"><b>Role</b> - {{ player.Role }}.
-                         <b>DOB</b> - {{ player.DOB }}
+               {% for coach in all_coach %}
+                   <div class="pull-left col-sm-3 " id="ash">
+                   <p>
+                        <img src='{{ coach.coach_image.url }}'  class="img-responsive center-block" alt="" >
+                        <div class="navbar-text text-center" ><b>{{ coach.coach_name }}</b><br>
+                        <div class="text-left">
+                            <b>Coaching Team</b> &nbsp;&nbsp;- &ensp;{{ coach.coach_team }}<br>
+                            <b>Country</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;&nbsp; - &ensp;{{ coach.country }}<br>
+                            <b>DOB</b> &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp; - &ensp;{{ coach.DOB }}<br>
+                            <b>Joining Date</b> &ensp;&ensp;&ensp;&nbsp;- &ensp;{{ coach.start_date }}<br>
                         <br>
                             </div>
                         </div>
                         </p>
-                     </a>
-                 </div>
+                      </div>
                     {% endfor %}
 
 			  </section>

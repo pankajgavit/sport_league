@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
-from .models import Team, Player
+from .models import Team, Player, Coach
 
 def index(request):
     all_teams = Team.objects.all()
@@ -18,6 +18,11 @@ def detail(request, team_id):
 def standings(request):
     all_teams = Team.objects.all()
     return render(request, 'team/standings.html',{'all_teams' : all_teams})
+
+
+def coach(request):
+    all_coach = Coach.objects.order_by('coach_team')
+    return render(request, 'team/coach.html',{'all_coach' : all_coach})
 
 
 def stats(request, team_id, player_id):
