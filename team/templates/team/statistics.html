@@ -199,7 +199,7 @@ function toggle4() {
   {% for player_goals in all_player_goals %}
     <tr>
       <th scope="row">{{ forloop.counter}}</th>
-      <td>{{ player_goals.player_name }}</td>
+      <td> <a href="/team/{{ player_goals.team.id }}/{{ player_goals.id }}">{{ player_goals.player_name }}</a></td>
       <td>{{ player_goals.team }}</td>
       <td>{{ player_goals.goals }}</td>
     </tr>
@@ -224,7 +224,7 @@ function toggle4() {
   {% for player_assist in all_player_assists %}
     <tr>
       <th scope="row">{{ forloop.counter }}</th>
-      <td>{{ player_assist.player_name }}</td>
+      <td><a href="/team/{{ player_assist.team.id }}/{{ player_assist.id }}">{{ player_assist.player_name }}</a></td>
       <td>{{ player_assist.team }}</td>
       <td>{{ player_assist.assists }}</td>
     </tr>
@@ -247,9 +247,9 @@ function toggle4() {
   </thead>
   <tbody>
    {% for player_yellow in all_player_yellow %}
-    <tr>
+    <tr >
       <th scope="row">{{ forloop.counter }}</th>
-      <td>{{ player_yellow.player_name }}</td>
+      <td><a href="/team/{{ player_yellow.team.id }}/{{ player_yellow.id }}">{{ player_yellow.player_name }}</a></td>
       <td>{{ player_yellow.team }}</td>
       <td>{{ player_yellow.yellow_card }}</td>
     </tr>
@@ -274,7 +274,7 @@ function toggle4() {
     {% for player_red in all_player_red %}
     <tr>
       <th scope="row">{{ forloop.counter }}</th>
-      <td>{{ player_red.player_name }}</td>
+      <td><a href="/team/{{ player_red.team.id }}/{{ player_red.id }}">{{ player_red.player_name }}</a></td>
       <td>{{ player_red.team }}</td>
       <td>{{ player_red.red_card }}</td>
     </tr>
