@@ -20,6 +20,42 @@
 			});
 		</script>
 
+<style>
+
+.container-table {
+	background-image: url('http://sbobetonline.biz/wp-content/uploads/2016/07/background-bola-online.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.divider {
+  height: 3px;
+  width:100%;
+  display:block; /* for use on default inline elements like span */
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.row{
+    background-color: black;
+    background: rgba(0, 0, 0, 0.6);
+    padding : 20px;
+}
+.row small{
+    color: #adafb2;
+}
+.row td{
+	padding: 8px;
+}
+
+
+</style>
 
 <head>
 	<title>Teams Standings</title>
@@ -58,6 +94,7 @@
 </div>
 <!-- //header -->
 <!-- banner -->
+<div class="container-table">
 <div class="strip">
 	 <div class="container">
 	 <div class="search">
@@ -91,29 +128,37 @@
                  <h2>Team Standings</h2>
 
 
-             <div class="row" style="background-color: lavender">
-                <div class="col-md-10">
+             <div class="row">
+               <div class="col-md-2"></div>
+                <div class="col-md-9" style="color: white">
                     <h3>Sports League  <small>First Edition</small></h3><br>
-                    <table>
-                        <tr>
+                    <table class="table table-hover" style="color: #d2d4d8">
+                        <tr class="text-center">
                             <th class="col-xs-3">Team</th>
                             <th>Wins</th>
                             <th>Losses</th>
                             <th>Ties</th>
                             <th>Total Points</th>
+                            <th>Goal Difference</th>
                         </tr>
 
                         {% for teams in all_teams %}
-                            <tr>
-                                <td class="col-xs-3">{{ teams.team_name }}</td>
-                                <td>{{ teams.wins }}</td>
-                                <td>{{ teams.loss }}</td>
-                                <td>{{ teams.ties }}</td>
-                                <td>{{ teams.points }}</td>
-                            </tr>
+                                <tr>
+                                    <td class="col-xs-3">
+                                        <a href="/team/{{ teams.id }}">
+                                            <div style="color:#d2d4d8">{{ teams.team_name }}</div>
+                                        </a>
+                                    </td>
+                                    <td>{{ teams.wins }}</td>
+                                    <td>{{ teams.loss }}</td>
+                                    <td>{{ teams.ties }}</td>
+                                    <td>{{ teams.points }}</td>
+                                    <td>{{ teams.runrate }}</td>
+                                </tr>
                         {% endfor %}
+
                     </table>
-                    <br><br><br>
+                    <br>
                 </div>
 
              </div>
@@ -121,10 +166,7 @@
      </div>
 <br><br><br><br>
 </div>
-<div class="container">
-		 <div class="main" >
-
-         </div>
+</div>
 </div>
 <!--footer-->
 <div class="footer">
@@ -138,7 +180,7 @@
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
 				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
-				 <li><a href="{% url 'matches:index' %}l">RESULTS</a></li>
+				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
 				 <li class="active"><a href="{% url 'home:index' %}">BROADCAST</a></li>
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>

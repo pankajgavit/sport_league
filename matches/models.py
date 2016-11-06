@@ -6,6 +6,7 @@ from team.models import Team
 class Matches(models.Model):
     home = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="home")
     away = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="away")
+    # 0 - Upcoming, 1 - proper result, 2 - tied
     result = models.IntegerField(default=0)
     result_team = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="match_result", null="False")
     home_goals = models.IntegerField(default=0)
@@ -33,4 +34,5 @@ class Matches(models.Model):
         lost.save()'''
 
         #Matches.objects.filter(pk=self.result_id).update(home='jdflksjldf')
+
         return str(self.home.team_name) + " vs " + str(self.away.team_name)

@@ -13,7 +13,7 @@ urlpatterns = [
 
 
     # /team/standings/
-    url(r'^standings', views.standings, name='standings'),
+    url(r'^standings/', views.standings, name='standings'),
 
 
     #team/712/52

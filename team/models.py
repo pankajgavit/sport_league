@@ -7,12 +7,17 @@ class Team(models.Model):
     team_name = models.CharField(max_length=500)
     location = models.CharField(max_length=100)
     logo = models.FileField()
-    rank = models.IntegerField()
-    matches = models.IntegerField()
     wins = models.IntegerField()
     ties = models.IntegerField()
     loss = models.IntegerField()
     points = models.IntegerField()
+    runrate = models.FloatField()
+
+    def matches_(self):
+        if self.id:
+            return self.wins + self.loss + self.ties
+
+    matches = property(matches_) #wins + loss + ties
 
     def __str__(self):
         return self.team_name

@@ -34,16 +34,150 @@
 //-->
 </script>
 
+<script>
+    /* Light YouTube Embeds by @labnol */
+    /* Web: http://labnol.org/?p=27941 */
+
+    document.addEventListener("DOMContentLoaded",
+        function() {
+            var div, n,
+                v = document.getElementsByClassName("youtube-player");
+            for (n = 0; n < v.length; n++) {
+                div = document.createElement("div");
+                div.setAttribute("data-id", v[n].dataset.id);
+                div.innerHTML = labnolThumb(v[n].dataset.id);
+                div.onclick = labnolIframe;
+                v[n].appendChild(div);
+            }
+        });
+
+    function labnolThumb(id) {
+        var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+            play = '<div class="play"></div>';
+        return thumb.replace("ID", id) + play;
+    }
+
+    function labnolIframe() {
+        var iframe = document.createElement("iframe");
+        var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+        iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("allowfullscreen", "1");
+        this.parentNode.replaceChild(iframe, this);
+    }
+
+</script>
+
+
 <style>
-    .divider {
-  height: 3px;
-  width:100%;
-  display:block; /* for use on default inline elements like span */
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5;
+
+    .row p{
+        font-size: 30px;
+        font-family: oswald;
+    }
+
+.button {
+    background-color:  #008CBA;
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
 }
+
+.button {
+    background-color: #008CBA;
+    color: #d1d1d1;
+    border: 2px solid #008CBA;
+}
+    .container-sub {
+	background-image: url('http://sbobetonline.biz/wp-content/uploads/2016/07/background-bola-online.jpg');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+    .matches-result{
+        background-color: black;
+        background: rgba(0, 0, 0, 0.6);
+        padding : 20px;
+    }
+    .matches-result{
+        color: white;
+    }
+
+    .divider {
+      height: 3px;
+      width:100%;
+      display:block; /* for use on default inline elements like span */
+      margin: 9px 0;
+      overflow: hidden;
+      background-color: #e5e5e5;
+    }
+
+    .youtube-player {
+        position: relative;
+        padding-bottom: 56.23%;
+        /* Use 75% for 4:3 videos */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        margin: 5px;
+    }
+
+    .youtube-player iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: transparent;
+    }
+
+    .youtube-player img {
+        bottom: 0;
+        display: block;
+        left: 0;
+        margin: auto;
+        max-width: 100%;
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+        height: auto;
+        cursor: pointer;
+        -webkit-transition: .4s all;
+        -moz-transition: .4s all;
+        transition: .4s all;
+    }
+
+    .youtube-player img:hover {
+        -webkit-filter: brightness(75%);
+    }
+
+    .youtube-player .play {
+        height: 72px;
+        width: 72px;
+        left: 50%;
+        top: 50%;
+        margin-left: -36px;
+        margin-top: -36px;
+        position: absolute;
+        background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+        cursor: pointer;
+    }
 </style>
+
 <head>
 	<title>Results</title>
 </head>
@@ -100,7 +234,10 @@
 </div>
 <!-- banner -->
 <!-- //header -->
-<div class="container">
+<div class="container-table">
+
+<div class="container-sub">
+    <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
              <li class="active"><a href="{% url 'matches:index' %}">Results</a></li>
@@ -109,12 +246,11 @@
 
 <div class="gallery-text">
 		 <div class="container">
-		 <h2>Results</h2>
-		 <p>Matches in the League are as follows:</p>
+		    <h2>Results</h2>
+		    <p>Matches in the League are as follows:</p>
 		 </div>
 </div>
 </div>
-<div class="container">
 		 <div class="main" >
 		 <div class="gallery">
 			  <section class="row">
@@ -124,25 +260,25 @@
                        <div class="matches-result">
                         <div class="pull-left col-sm-4 " id="ash">
                            <p class=" text-center">
-                                <a href="/team/{{ matches.home.id }}/">
-                                    <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
+                                <a href="/team/{{ matches.home.id }}/" style="color: #e5e5e5">
+                                    <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block">
                                     {{ matches.home.team_name }}
                                 </a>
                            </p>
                            </div>
 
                            <div  class="pull-left col-sm-4 " id="ash" >
-                              <h1 class="text-center" style="font-family: Calibri; font-size:40px;">
+                              <p class="text-center" style="font-family: oswald; font-size:70px;">
                                   {{ matches.home_goals }}
-                                  <small>&emsp;&emsp;-&emsp;&emsp;</small>
+                                  <small>&emsp;-&emsp;</small>
                                   {{ matches.away_goals }}<br><br>
                                   <small style="font-size: medium">FT</small>
-                              </h1>
+                              </p>
                            </div>
 
                            <div  class="pull-left col-sm-4 " id="ash" >
                               <p class="text-center">
-                                <a href="/team/{{ matches.away.id }}/">
+                                <a href="/team/{{ matches.away.id }}/" style="color: #e5e5e5">
                                     <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
                                     {{ matches.away.team_name }}
                                 </a>
@@ -150,112 +286,23 @@
                            </div>
 
                         <div class="text-center" id="ash">
-                            <button onclick="toggle_visibility('{{ matches.video }}');">Highlights</button><br><br>
+                            <button class="button" onclick="toggle_visibility('{{ matches.video }}');">Highlights</button><br><br>
                             <!--iframe class="text-center" id="" style="display: none" width="560" height="315"
                                    src=""
                                    frameborder="0" allowfullscreen>
                             </iframe-->
-                            <div class="youtube-player" id="{{ matches.video }}" data-id="yj2gbW7pIZM" style="display: none;"></div>
-                            <script>
-                                /* Light YouTube Embeds by @labnol */
-                                /* Web: http://labnol.org/?p=27941 */
-
-                                document.addEventListener("DOMContentLoaded",
-                                    function() {
-                                        var div, n,
-                                            v = document.getElementsByClassName("youtube-player");
-                                        for (n = 0; n < v.length; n++) {
-                                            div = document.createElement("div");
-                                            div.setAttribute("data-id", v[n].dataset.id);
-                                            div.innerHTML = labnolThumb(v[n].dataset.id);
-                                            div.onclick = labnolIframe;
-                                            v[n].appendChild(div);
-                                        }
-                                    });
-
-                                function labnolThumb(id) {
-                                    var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
-                                        play = '<div class="play"></div>';
-                                    return thumb.replace("ID", id) + play;
-                                }
-
-                                function labnolIframe() {
-                                    var iframe = document.createElement("iframe");
-                                    var embed = "https://www.youtube.com/embed/ID?autoplay=1";
-                                    iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
-                                    iframe.setAttribute("frameborder", "0");
-                                    iframe.setAttribute("allowfullscreen", "1");
-                                    this.parentNode.replaceChild(iframe, this);
-                                }
-
-                            </script>
-                            <style>
-                                .youtube-player {
-                                    position: relative;
-                                    padding-bottom: 56.23%;
-                                    /* Use 75% for 4:3 videos */
-                                    height: 0;
-                                    overflow: hidden;
-                                    max-width: 100%;
-                                    background: #000;
-                                    margin: 5px;
-                                }
-
-                                .youtube-player iframe {
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    width: 100%;
-                                    height: 100%;
-                                    z-index: 100;
-                                    background: transparent;
-                                }
-
-                                .youtube-player img {
-                                    bottom: 0;
-                                    display: block;
-                                    left: 0;
-                                    margin: auto;
-                                    max-width: 100%;
-                                    width: 100%;
-                                    position: absolute;
-                                    right: 0;
-                                    top: 0;
-                                    border: none;
-                                    height: auto;
-                                    cursor: pointer;
-                                    -webkit-transition: .4s all;
-                                    -moz-transition: .4s all;
-                                    transition: .4s all;
-                                }
-
-                                .youtube-player img:hover {
-                                    -webkit-filter: brightness(75%);
-                                }
-
-                                .youtube-player .play {
-                                    height: 72px;
-                                    width: 72px;
-                                    left: 50%;
-                                    top: 50%;
-                                    margin-left: -36px;
-                                    margin-top: -36px;
-                                    position: absolute;
-                                    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
-                                    cursor: pointer;
-                                }
-
-                            </style>
+                            <div class="youtube-player" id="{{ matches.video }}" data-id="{{ matches.video }}" style="display: none;"></div>
                         </div>
 
-                       <p class="divider"></p><br><br>
-                    </div>
+                       <!--p class="divider"></p-->
+                    </div><br><br>
                 {% endif %}
                {% endfor %}
 
 			  </section>
          </div>
          </div>
+</div>
 </div>
 <!--footer-->
 <div class="footer">
@@ -270,7 +317,7 @@
 				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
-				 <li class="active"><a href="{% url 'home:index' %}l">BROADCAST</a></li>
+				 <li class="active"><a href="{% url 'home:index' %}">BROADCAST</a></li>
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
