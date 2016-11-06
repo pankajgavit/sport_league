@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^video/', include('video.urls')),
     url(r'^team/', include('team.urls')),
     url(r'^matches/', include('matches.urls')),
+    url(r'^gallery/', include('gallery.urls')),
 ]
 
 if settings.DEBUG:
