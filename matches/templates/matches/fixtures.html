@@ -22,13 +22,31 @@
 
 <style>
     .divider {
-  height: 3px;
-  width:100%;
-  display:block; /* for use on default inline elements like span */
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5;
-}
+      height: 3px;
+      width:100%;
+      display:block; /* for use on default inline elements like span */
+      margin: 9px 0;
+      overflow: hidden;
+      background-color: #e5e5e5;
+    }
+    .matches-result{
+        background-color: black;
+        background: rgba(0, 0, 0, 0.6);
+        padding : 40px;
+    }
+     .gallery{
+        color: white;
+    }
+     .container-sub {
+	background-image: url('http://sbobetonline.biz/wp-content/uploads/2016/07/background-bola-online.jpg');
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
 </style>
 <head>
 	<title>Fixtures</title>
@@ -85,6 +103,8 @@
 </div>
 <!-- banner -->
 <!-- //header -->
+
+<div class="container-sub">
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
@@ -95,48 +115,51 @@
 <div class="gallery-text">
 		 <div class="container">
 		 <h2>Fixtures</h2>
-		 <p>Matches in the League are as follows:</p>
+		 <p style="color: #d1d1d1">Matches in the League are as follows:</p>
 		 </div>
 </div>
 </div>
+
 <div class="container">
 		 <div class="main" >
 		 <div class="gallery" >
 			  <section class="row">
-
-               {% for matches in all_matches %}
+                {% for matches in all_matches %}
                    {% if matches.result == 0 %}
-                   <div class="pull-left col-sm-4 " id="ash">
-                   <p class=" text-center">
-                        <a href="/team/{{ matches.home.id }}/">
-                            <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block" alt="" >
-                            {{ matches.home.team_name }}
-                        </a>
-                        </p>
-                      </div>
+                       <div class="matches-result" style="font-family: oswald; font-size: 30px">
+                        <div class="pull-left col-sm-4 " id="ash">
+                           <p class=" text-center">
+                                <a href="/team/{{ matches.home.id }}/" style="color: #e5e5e5;">
+                                    <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block">
+                                    {{ matches.home.team_name }}
+                                </a>
+                           </p>
+                           </div>
 
-                   <div  class="pull-left col-sm-4 " id="ash" >
-                      <h1 class="text-center">
-                          VS
-                        </h1>
-                 </div>
+                           <div  class="pull-left col-sm-4 " id="ash" >
+                              <p class="text-center" style="font-family: oswald; font-size:40px;">
+                                  VS
+                              </p>
+                           </div>
 
-                 <div  class="pull-left col-sm-4 " id="ash" >
-                      <p class="text-center">
-                        <a href="/team/{{ matches.away.id }}/">
-                            <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
-                            {{ matches.away.team_name }}
-                        </a>
-                        </p>
-                 </div>
-
+                           <div  class="pull-left col-sm-4 " id="ash" >
+                              <p class="text-center">
+                                <a href="/team/{{ matches.away.id }}/" style="color: #e5e5e5">
+                                    <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
+                                    {{ matches.away.team_name }}
+                                </a>
+                              </p>
+                           </div>
+                           <br><br><br><br><br><br><br>
+                       <!--p class="divider"></p-->
+                    </div><br><br>
                 {% endif %}
                {% endfor %}
 
 			  </section>
-			 <div class="clearfix " > </div>
 		  </div>
          </div>
+</div>
 </div>
 <!--footer-->
 <div class="footer">
