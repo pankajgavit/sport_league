@@ -24,4 +24,10 @@ urlpatterns = [
     #team/712/52
     url(r'^(?P<team_id>[0-9]+)/(?P<player_id>[0-9]+)/$', views.stats, name = 'player_detail'),
 
+    # /team/contact/
+    url(r'^contact/$', views.contact, name='contact'),
+
+    # /team/contact/
+    url(r'^institutional/$', views.insti, name='insti'),
+
 ]

@@ -14,6 +14,10 @@
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'home/css/w3.css' %}" type="text/css" media="all" />
+        <style>
+        .myslides {display:none;}
+        </style>
 	   <script type="text/javascript">
 			$(document).ready(function() {
 				$('.fancybox').fancybox();
@@ -39,7 +43,7 @@
 	 <div class="container">
 		 <div class="logo">
 			   <h1><a href="{% url 'home:index' %}">SPORTS LEAGUE</a></h1>
-		 </div>	
+		 </div>
 		 <div class="top-menu">
 			 <span class="menu"></span>
 			  <ul>
@@ -51,6 +55,7 @@
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>			 
 		 </div>			
+
 		 <!-- script-for-menu -->
 		 <script>
 				$("span.menu").click(function(){
@@ -58,7 +63,7 @@
 					});
 				});
 		 </script>
-		 <!-- script-for-menu -->	  	
+		 <!-- script-for-menu -->
 
 		 <div class="clearfix"></div>
 	 </div>
@@ -84,56 +89,69 @@
 		</div>
 </div>
 <!-- banner -->
-<div class="banner">
-		<script src="{% static 'home/js/responsiveslides.min.js' %}"></script>
-  <script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	speed: 600,
-        manualControls: '#slider3-pager',
-      });
-    });
-  </script>
 
- <div class="slider">
+
+
+<div class="slider">
 	  <div class="callbacks_container">
 
-	     <ul class="rslides" id="slider">
-	         <li>
-				  <img src="{% static 'team/images/bnr3.jpg' %}" alt="">
-				  <div class="banner-info">
+        <div class="w3-display-container w3-animate-top mySlides">
+  <img src="{% static 'team/images/bnr3.jpg' %}" style="width:100%; height: 550px" >
+  <div class="banner-info">
 				  <h3>Football is Life</h3>
-				  <p>It requires perseverance, self-denial, hard work, sacrifice, dedication and respect for club and nation that we play for. 
-</p>
+				  <p>It requires perseverance, self-denial, hard work, sacrifice, dedication and respect for club and nation that we play for.
+                    </p>
 				  </div>
-	         </li>
-	         <li>
-				 <img src="{% static 'team/images/g7.jpg' %}" alt="">
-	        	 <div class="banner-info">
+</div>
+
+<div class="w3-display-container w3-animate-bottom mySlides">
+  <img src="{% static 'team/images/g7.jpg' %}" style="width:100%; height: 550px">
+  <div class="banner-info">
 				  <h3>What is Football?</h3>
 				  <p>Football is about joy. It's about dribbling. I favour every idea that makes the game beautiful. Every good idea has to last.</p>
 				  </div>
-			 </li>
-	         <li>
-	             <img src="{% static 'team/images/bn07.jpg' %}" alt="">
-	        	 <div class="banner-info">
+</div>
+
+<div class="w3-display-container w3-animate-top mySlides">
+  <img src="{% static 'team/images/bnr07.jpg' %}" style="width:100%; height: 550px">
+  <div class="banner-info">
 				  <h3>What do you need?</h3>
 				  <p>Attitude is the liitle thing that makes a big difference between Footballing Success and Footballing failure</p>
 				  </div>
-	         </li>
-	         <li>
-				 <img src="{% static 'team/images/e3.jpg' %}" alt="">
-	        	 <div class="banner-info">
+</div>
+
+<div class="w3-display-container w3-animate-bottom mySlides">
+  <img src="{% static 'team/images/e3.jpg' %}" style="width:100%; height: 550px">
+  <div class="banner-info">
 				  <h3>A Beautiful Game</h3>
 				  <p>Everytime I step onto the pitch,all my troubles go away.The only thing that matters on the field is,a beautiful game</p>
 				  </div>
-			 </li>
-	      </ul>
-	  </div>
-  </div>
+</div>
+</div>
+    </div>
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
 <!---->
-				
+
 	 <!---start-content----->
 	 <div class="banner-bottom-grids">
 		 <div class="container">
@@ -272,11 +290,11 @@
 		 <div class="footer-menu">
 			 <ul>
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
-				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'team:insti' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'home:index'%}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index'%}">RESULTS</a></li>
 				 <li><a href="{% url 'home:index' %}">BROADCAST</a></li>
-				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
+				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>

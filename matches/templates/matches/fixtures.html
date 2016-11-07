@@ -14,6 +14,7 @@
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
 	    <script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
 	   <script type="text/javascript">
 			$(document).ready(function() {
 				$('.fancybox').fancybox();
@@ -63,11 +64,11 @@
 			 <span class="menu"></span>
 			  <ul>
 				  <li class="active"><a href="{% url 'home:index' %}">HOME</a></li>
-				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'team:insti' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
 				 <li ><a href="{% url 'home:index' %}">BROADCAST</a></li>
-				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
+				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <!-- script-for-menu -->
@@ -115,7 +116,7 @@
 <div class="gallery-text">
 		 <div class="container">
 		 <h2>Fixtures</h2>
-		 <p style="color: #d1d1d1">Matches in the League are as follows:</p>
+		 <p style="color: #d1d1d1">Upcoming matches in the League are as follows:</p>
 		 </div>
 </div>
 </div>
@@ -171,11 +172,11 @@
 		 <div class="footer-menu">
 			 <ul>
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
-				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'team:insti' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
 				 <li class="active"><a href="{% url 'home:index' %}l">BROADCAST</a></li>
-				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
+				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>

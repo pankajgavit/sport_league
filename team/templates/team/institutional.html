@@ -76,45 +76,87 @@
 </div>
 <!-- banner -->
 <!-- //header -->
-<div class="container">
+<div class="about">
+	 <div class="container">
 		 <ol class="breadcrumb">
-		  <li><a href="{% url 'home:index' %}">Home</a></li>
-		  <li><a href="{% url 'team:index' %}">Team</a></li>
-             <li class="active">{{ team.team_name }}</li>
+		  <li><a href="index.html">Home</a></li>
+		  <li class="active">Institutional</li>
 		 </ol>
-</div>
+		 <h2>About</h2>
+		 <div class="about-head">
+			 <p><b>Find out more about how the Sports League is organised</b><br>
 
-<div class="gallery-text">
-		 <div class="container">
-		 <h2>{{ team.team_name }}</h2>
-		 <p>Players in the {{ team.team_name }} are as follows:</p>
+The Sports League is the organising body of the Sports League with responsibility for the competition, its Rule Book and the centralised broadcast and other commercial rights.</p>
 		 </div>
-</div>
-<div class="container">
-		 <div class="main" >
-		 <div class="gallery" >
-			  <section class="row">
+		 <div class="about-grids">
+			 <div class="about-grid">
+				 <h3>WHO WE ARE</h3>
+				 <p class="abt-info">The Sports League is an Proffesional Football League for men's association Football.
+				The Sports League is a corporation in which the 8 member clubs act as shareholders. In this league each member club has to play against
+				all other member clubs twice.One match will played in the member club's home match and the other will be an away match
+				There will be a total of 112 matches per season</p>
+				 <p>It is going to be the 12th season in Sports League.Last year FC barcelona won the Sports League.Real madrid C.F holds the
+				 record for winning most number of titles<br>
+				Most number of titles:Real Madrid C.F(5 Titles)  </p>
+				 <a href="#">Read More..</a>
+			</div>
+			 <div class="about-pic">
+				 <img src="{% static 'team/images/barca-4.jpg' %}" alt=""/>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+		 <div class="abt_text">
+				<div class="col-md-4 values">
+					 <h3>Top teams </h3>
+					 <div class="value-grd">
+						 <span>01.</span>
+						 <h4>REAL MADRID C.F</h4>
+						 <p>A team based on Northern Madrid which prefers to play counter attacking football</p>
+					 </div>
+					 <div class="value-grd">
+						 <span>02.</span>
+						 <h4>FC BARCELONA</h4>
+						 <p>A team based on Barcelona which prefers to play possesion bsed football</p>
+					 </div>
+					 <div class="value-grd">
+						 <span>03.</span>
+						 <h4>ATLETICO MADRID</h4>
+						 <p>A team based on southern madrid which prefers to defend deep and attack on counters.</p>
+					 </div>
+				</div>
+					<div class="abt_text">
+							<div class="col-md-4 values">
+					 		<h3>Top Players</h3>
+					 <div class="value-grd">
+						 <span>01.</span>
+						 <h4>Cristiano Ronaldo</h4>
+						 <p>A player from Portugal who plays for Real Madrid C.F as a left winger</p>
+					 </div>
+					 <div class="value-grd">
+						 <span>02.</span>
+						 <h4>Lionel Messi</h4>
+						 <p>A player from Argentina who plays as a right winger for FC Barcelona</p>
+					 </div>
+					 <div class="value-grd">
+						 <span>03.</span>
+						 <h4>LUIS SUAREZ</h4>
+						 <p>A player from Uruguay who plays for FC Barcelona as a Striker</p>
+					 </div>
+				</div>
 
-             {% for player in team.player_set.all %}
-                 <div  class="pull-left col-sm-3 " id="ash" >
-                 <a href="/team/{{ team.id }}/{{ player.id }}">
-                      <p>
-                        <img src='{{ player.player_image.url }}'  class="img-responsive center-block" alt="" >
-                        <div class="navbar-text text-center">{{ player.player_name }}<br>
-                     <div style="font-size: small"><b>Role</b> - {{ player.Role }}.
-                         <b>DOB</b> - {{ player.DOB }}
-                        <br>
-                            </div>
-                        </div>
-                        </p>
-                     </a>
-                 </div>
-                    {% endfor %}
-
-			  </section>
-			 <div class="clearfix"> </div>
-		  </div>
-         </div>
+				</div>
+				<div class="col-md-4 testi">
+					 <h3>QUOTES</h3>
+				     <p>To me, football is so much about mental toughness, it's digging deep, it's doing whatever you need to do to help a team win and that comes in a lot of shapes and forms</p>
+					 <a href="#">TOM BRADY</a>
+					 <p>I've never been a fan of individual awards because football is such a team sport. There's so many things that goes into making plays. It's about teammates trusting one another and working together.</p>
+					 <a href="#"> TROY POLAMALU</a>
+					 <p>Football fans share a universal language that cuts across many cultures and many personality types. A serious football fan is never alone. We are legion, and football is often the only thing we have in common</p>
+					 <a href="#">HUNTER S. THOMPSON</a>
+				</div>
+				<div class="clearfix"></div>
+		 </div>
+	 </div>
 </div>
 <!--footer-->
 <div class="footer">

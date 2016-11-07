@@ -1,5 +1,5 @@
 {% load staticfiles %}
-		<link rel="icon" href="{% static 'team/images/soccer.png' %}">
+        <link rel="icon" href="{{ team.logo.url }}">
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -13,52 +13,16 @@
 		<meta name="keywords" content="soccer Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
+	    <script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
 	   <script type="text/javascript">
 			$(document).ready(function() {
 				$('.fancybox').fancybox();
 			});
 		</script>
 
-<style>
-
-.container-table {
-	background-image: url('http://sbobetonline.biz/wp-content/uploads/2016/07/background-bola-online.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-
-}
-
-.divider {
-  height: 3px;
-  width:100%;
-  display:block; /* for use on default inline elements like span */
-  margin: 9px 0;
-  overflow: hidden;
-  background-color: #e5e5e5;
-}
-
-.row{
-    background-color: black;
-    background: rgba(0, 0, 0, 0.6);
-    padding : 20px;
-}
-.row small{
-    color: #adafb2;
-}
-.row td{
-	padding: 8px;
-}
-
-
-</style>
 
 <head>
-	<title>Teams Standings</title>
+	<title>{{ team.team_name }} Squad </title>
 </head>
 
 <body>
@@ -77,8 +41,6 @@
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
 				 <li ><a href="{% url 'home:index' %}">BROADCAST</a></li>
 				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
-
-
 			 </ul>
 		 </div>
 		 <!-- script-for-menu -->
@@ -94,7 +56,6 @@
 </div>
 <!-- //header -->
 <!-- banner -->
-<div class="container-table">
 <div class="strip">
 	 <div class="container">
 	 <div class="search">
@@ -118,55 +79,45 @@
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-		  <li class="active">Team</li>
+             <li class="active">Contact Us</li>
 		 </ol>
-
-
-	 <div class="social">
-         <div class="gallery-text">
-             <div class="container">
-                 <h2>Team Standings</h2>
-
-
-             <div class="row">
-               <div class="col-md-2"></div>
-                <div class="col-md-9" style="color: white">
-                    <h3>Sports League  <small>First Edition</small></h3><br>
-                    <table class="table table-hover" style="color: #d2d4d8">
-                        <tr class="text-center">
-                            <th class="col-xs-3">Team</th>
-                            <th>Wins</th>
-                            <th>Losses</th>
-                            <th>Ties</th>
-                            <th>Total Points</th>
-                            <th>Goal Difference</th>
-                        </tr>
-
-                        {% for teams in all_teams %}
-                                <tr>
-                                    <td class="col-xs-3">
-                                        <a href="/team/{{ teams.id }}">
-                                            <div style="color:#d2d4d8">{{ teams.team_name }}</div>
-                                        </a>
-                                    </td>
-                                    <td>{{ teams.wins }}</td>
-                                    <td>{{ teams.loss }}</td>
-                                    <td>{{ teams.ties }}</td>
-                                    <td>{{ teams.points }}</td>
-                                    <td>{{ teams.runrate }}</td>
-                                </tr>
-                        {% endfor %}
-
-                    </table>
-                    <br>
-                </div>
-
-             </div>
-        </div>
-     </div>
-<br><br><br><br>
 </div>
-</div>
+
+<div class="contact">
+	 <div class="container">
+		 <div class="contact-grids">
+			 <h2>CONTACT US</h2>
+			 <div class="contact-icons">
+				<div class="contact-grid">
+					<div class="contact-fig">
+						<span> </span>
+					</div>
+					<p>+91 7022090094</p>
+				</div>
+				<div class="contact-grid">
+					<div class="contact-fig1">
+						<span> </span>
+					</div>
+					<p>MEGA TOWER-2
+						<span>NITK HOSTELS</span></p>
+				</div>
+				<div class="contact-grid">
+					<div class="contact-fig2">
+						<span> </span>
+					</div>
+					<p><a href="mailto:queries@sportsleague.com">queries@sportsleague.com</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			 </div>
+			 <form>
+				<input type="text" placeholder="Name" required=" ">
+				<input type="text" placeholder="Email" required=" ">
+				<input type="text" placeholder="Website" required=" ">
+				<textarea placeholder="Message..." required=" "></textarea>
+				<input type="submit" value="SEND">
+			 </form>
+		 </div>
+	 </div>
 </div>
 <!--footer-->
 <div class="footer">
@@ -181,19 +132,14 @@
 				 <li><a href="{% url 'team:insti' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
-				 <li class="active"><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li class="active"><a href="{% url 'home:index' %}l">BROADCAST</a></li>
 				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>
 	 </div>
 </div>
-     </div>
 <!-- //footer -->
 </body>
-
-
-
-
 
 

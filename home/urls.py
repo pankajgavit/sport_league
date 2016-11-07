@@ -6,9 +6,6 @@ app_name = 'home'
 
 urlpatterns = [
     #/home/
-    url(r'^$',views.index, name='index' ),
-
-    #/home/search/
-
+    url(r'^$',views.index, name='index'),
 
     ]
