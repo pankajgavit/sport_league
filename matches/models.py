@@ -6,7 +6,7 @@ from team.models import Team
 class Matches(models.Model):
     home = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="home")
     away = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="away")
-    # 0 - Upcoming, 1 - proper result, 2 - tied
+    # 0 - Upcoming, 1 - proper result, 2 - tied, 3-live match
     result = models.IntegerField(default=0)
     result_team = models.ForeignKey('team.Team', on_delete=models.CASCADE, related_name="match_result", null="False")
     home_goals = models.IntegerField(default=0)

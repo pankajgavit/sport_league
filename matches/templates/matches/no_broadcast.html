@@ -179,9 +179,17 @@
     }
 </style>
 
+
 <head>
-	<title>Results</title>
+	    <title>
+            {% for matches in all_matches %}
+                {% if matches.result == 3 %}
+                    {{ matches.home_goals }} - {{ matches.away_goals }} | {{ matches.home.team_name}} - {{ matches.away.team_name }}
+                {% endif %}
+            {% endfor %}
+        </title>
 </head>
+
 
 <body>
 <div class="complete-body">
@@ -198,8 +206,8 @@
 				 <li><a href="{% url 'team:insti' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
-				 <li><a href="{% url 'matches:broadcast' %}">BROADCAST</a></li>
-				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
+				 <li ><a href="{% url 'home:index' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <!-- script-for-menu -->
@@ -241,66 +249,36 @@
     <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-             <li class="active"><a href="{% url 'matches:index' %}">Results</a></li>
+             <li class="active"><a href="{% url 'matches:broadcast' %}">Broadcast</a></li>
 		 </ol>
 
 
 <div class="gallery-text">
-		 <div class="container">
-		    <h2>Results</h2>
-		    <p style="color: #f5f5f5">Matches in the League are as follows:</p>
-		 </div>
 </div>
 </div>
 		 <div class="main" >
 		 <div class="gallery">
 			  <section class="row">
+                           <div class="matches-result">
 
-               {% for matches in all_matches %}
-                   {% if matches.result == 1 or matches.result == 2 %}
-                       <div class="matches-result">
-                        <div class="pull-left col-sm-4 " id="ash">
-                           <p class=" text-center">
-                                <a href="/team/{{ matches.home.id }}/" style="color: #e5e5e5">
-                                    <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block">
-                                    {{ matches.home.team_name }}
-                                </a>
-                           </p>
-                           </div>
+                    <br><br><br><br><br><br>
+                               <div  class="pull-left col-sm-12 " id="ash" >
+                                  <p class="text-center" style="font-family: oswald; font-size:70px;">
+                                      No Live Matches
+                                  </p>
+                               </div><br><br><br><br>
 
-                           <div  class="pull-left col-sm-4 " id="ash" >
-                              <p class="text-center" style="font-family: oswald; font-size:70px;">
-                                  {{ matches.home_goals }}
-                                  <small>&emsp;-&emsp;</small>
-                                  {{ matches.away_goals }}<br><br>
-                                  <small style="font-size: medium">FT</small>
-                              </p>
-                           </div>
-
-                           <div  class="pull-left col-sm-4 " id="ash" >
-                              <p class="text-center">
-                                <a href="/team/{{ matches.away.id }}/" style="color: #e5e5e5">
-                                    <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
-                                    {{ matches.away.team_name }}
-                                </a>
-                              </p>
-                           </div>
-
-                        <div class="text-center" id="ash">
-                            <button class="button" onclick="toggle_visibility('{{ matches.video }}');">Highlights</button><br><br>
-                            <!--iframe class="text-center" id="" style="display: none" width="560" height="315"
-                                   src=""
-                                   frameborder="0" allowfullscreen>
-                            </iframe-->
-                            <div class="youtube-player" id="{{ matches.video }}" data-id="{{ matches.video }}" style="display: none;"></div>
+                               <div class="text-center" id="ash">
+                                <br><br><br>
+                                   <button class="button">
+                                   <a href="{% url 'home:index' %}" style="color: #dedede">Homepage</a>
+                                </button>
+                         <!--p class="divider"></p-->
                         </div>
-
-                       <!--p class="divider"></p-->
-                    </div><br><br>
-                {% endif %}
-               {% endfor %}
-
+                               <br><br><br><br>
+                          </div>
 			  </section>
+             <br><br>
          </div>
      </div>
 </div>
@@ -315,11 +293,11 @@
 		 <div class="footer-menu">
 			 <ul>
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
-				 <li><a href="{% url 'team:insti' %}">INSTITUTIONAL</a></li>
+				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
 				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
-				 <li class="active"><a href="{% url 'home:index' %}">BROADCAST</a></li>
-				 <li><a href="{% url 'team:contact' %}">CONTACT US</a></li>
+				 <li><a href="{% url 'matches:broadcast' %}">BROADCAST</a></li>
+				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
 			 </ul>
 		 </div>
 		 <div class="clearfix"></div>
