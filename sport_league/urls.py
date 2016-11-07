@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^team/', include('team.urls')),
     url(r'^matches/', include('matches.urls')),
     url(r'^gallery/', include('gallery.urls')),
+    url(r'^home/', include('home.urls')),
 ]
 
 if settings.DEBUG:

@@ -99,3 +99,13 @@ def points_update(all_teams):
     for team in all_teams:
         update_points = 3 * team.wins + team.ties
         Team.objects.filter(pk=team.pk).update(points=update_points)
+
+
+def contact(request):
+    return render(request,'team/contact.html')
+
+
+def insti(request):
+    return render(request,'team/institutional.html')
+
+

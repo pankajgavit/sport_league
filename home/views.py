@@ -32,3 +32,4 @@ def search(request):
                                   "search_string" : request.GET.get(QUERY,""),
                               }
        )
+
