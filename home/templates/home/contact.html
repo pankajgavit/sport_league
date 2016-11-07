@@ -1,5 +1,5 @@
 {% load staticfiles %}
-        <link rel="icon" href="{% static 'team/images/soccer.png' %}">
+        <link rel="icon" href="{{ team.logo.url }}">
         <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Cabin:400,500,600,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
@@ -14,43 +14,15 @@
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<script type="text/javascript" src="{% static 'team/js/jquery.min.js' %}"></script>
 	    <script type="text/javascript" src="{% static 'team/js/jquery.fancybox.js' %}"></script>
-<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet">
 	   <script type="text/javascript">
 			$(document).ready(function() {
 				$('.fancybox').fancybox();
 			});
 		</script>
 
-<style>
-    .divider {
-      height: 3px;
-      width:100%;
-      display:block; /* for use on default inline elements like span */
-      margin: 9px 0;
-      overflow: hidden;
-      background-color: #e5e5e5;
-    }
-    .matches-result{
-        background-color: black;
-        background: rgba(0, 0, 0, 0.6);
-        padding : 40px;
-    }
-     .gallery{
-        color: white;
-    }
-     .container-sub {
-	background-image: url('http://sbobetonline.biz/wp-content/uploads/2016/07/background-bola-online.jpg');
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
 
-</style>
 <head>
-	<title>Fixtures</title>
+	<title>{{ team.team_name }} Squad </title>
 </head>
 
 <body>
@@ -104,76 +76,61 @@
 </div>
 <!-- banner -->
 <!-- //header -->
-
-<div class="container-sub">
 <div class="container">
 		 <ol class="breadcrumb">
 		  <li><a href="{% url 'home:index' %}">Home</a></li>
-             <li class="active"><a href="{% url 'matches:fixtures' %}">Fixtures</a></li>
+             <li class="active">Contact Us</li>
 		 </ol>
+</div>
 
-
-<div class="gallery-text">
-		 <div class="container">
-		 <h2>Fixtures</h2>
-		 <p style="color: #d1d1d1">Upcoming matches in the League are as follows:</p>
+<div class="contact">
+	 <div class="container">
+		 <div class="contact-grids">
+			 <h2>CONTACT US</h2>
+			 <div class="contact-icons">
+				<div class="contact-grid">
+					<div class="contact-fig">
+						<span> </span>
+					</div>
+					<p>+91 7022090094</p>
+				</div>
+				<div class="contact-grid">
+					<div class="contact-fig1">
+						<span> </span>
+					</div>
+					<p>MEGA TOWER-2
+						<span>NITK HOSTELS</span></p>
+				</div>
+				<div class="contact-grid">
+					<div class="contact-fig2">
+						<span> </span>
+					</div>
+					<p><a href="mailto:queries@sportsleague.com">queries@sportsleague.com</a></p>
+				</div>
+				<div class="clearfix"> </div>
+			 </div>
+			 <form>
+				<input type="text" placeholder="Name" required=" ">
+				<input type="text" placeholder="Email" required=" ">
+				<input type="text" placeholder="Website" required=" ">
+				<textarea placeholder="Message..." required=" "></textarea>
+				<input type="submit" value="SEND">
+			 </form>
 		 </div>
-</div>
-</div>
-
-<div class="container">
-		 <div class="main" >
-		 <div class="gallery" >
-			  <section class="row">
-                {% for matches in all_matches %}
-                   {% if matches.result == 0 %}
-                       <div class="matches-result" style="font-family: oswald; font-size: 30px">
-                        <div class="pull-left col-sm-4 " id="ash">
-                           <p class=" text-center">
-                                <a href="/team/{{ matches.home.id }}/" style="color: #e5e5e5;">
-                                    <img src='{{ matches.home.logo.url }}'  class="img-responsive center-block">
-                                    {{ matches.home.team_name }}
-                                </a>
-                           </p>
-                           </div>
-
-                           <div  class="pull-left col-sm-4 " id="ash" >
-                              <p class="text-center" style="font-family: oswald; font-size:40px;">
-                                  VS
-                              </p>
-                           </div>
-
-                           <div  class="pull-left col-sm-4 " id="ash" >
-                              <p class="text-center">
-                                <a href="/team/{{ matches.away.id }}/" style="color: #e5e5e5">
-                                    <img src='{{ matches.away.logo.url }}'  class="img-responsive center-block" alt="" >
-                                    {{ matches.away.team_name }}
-                                </a>
-                              </p>
-                           </div>
-                           <br><br><br><br><br><br><br>
-                       <!--p class="divider"></p-->
-                    </div><br><br>
-                {% endif %}
-               {% endfor %}
-
-			  </section>
-		  </div>
-         </div>
-</div>
+	 </div>
 </div>
 <!--footer-->
 <div class="footer">
 	 <div class="container">
 		 <div class="copywrite">
 			<span></span>
-			 <p>© 2016 All Rights Reseverd Design by Sport League Team</p>
+			 <p>© 2016 All Rights Reseverd Design by Navy Corp</p>
 		 </div>
 		 <div class="footer-menu">
 			 <ul>
 				 <li><a href="{% url 'home:index' %}">HOME</a></li>
 				 <li><a href="{% url 'home:index' %}">INSTITUTIONAL</a></li>
-				 <li><a href="{% url 'matches:fixtures' %}">FIXTURES</a></li>
+				 <li><a href="{% url 'home:index' %}">FIXTURES</a></li>
 				 <li><a href="{% url 'matches:index' %}">RESULTS</a></li>
 				 <li class="active"><a href="{% url 'home:index' %}l">BROADCAST</a></li>
 				 <li><a href="{% url 'home:index' %}">CONTACT US</a></li>
