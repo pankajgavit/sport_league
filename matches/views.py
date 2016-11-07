@@ -11,3 +11,7 @@ def index(request):
 def fixtures(request):
     all_matches = Matches.objects.all()
     return render(request, 'matches/fixtures.html',{'all_matches' : all_matches})
+
+def broadcast(request):
+    current_matches = Matches.objects.filter(result=0)
+    return render(request, 'matches/broadcast.html', {'current_matches': current_matches})

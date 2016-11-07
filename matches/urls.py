@@ -10,4 +10,7 @@ urlpatterns = [
 
     #/matches/fixtures/
     url(r'^fixtures', views.fixtures, name='fixtures'),
+
+    #matches/broadcast/
+    url(r'^broadcast', views.broadcast, name='broadcast'),
 ]
