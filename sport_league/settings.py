@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'matches.apps.MatchesConfig',
     'video.apps.VideoConfig',
     'team.apps.TeamConfig',
+    'transfer.apps.TransferConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

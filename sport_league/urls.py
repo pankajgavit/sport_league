@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^matches/', include('matches.urls')),
     url(r'^gallery/', include('gallery.urls')),
     url(r'^home/', include('home.urls')),
+    url(r'^transfer/', include('transfer.urls')),
 ]
 
 if settings.DEBUG:
