@@ -5,6 +5,16 @@ from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Team, Player, Coach
 from matches.models import Matches
+from .forms import ContactForm
+from django.core.mail import EmailMessage
+from django.shortcuts import redirect
+from django.template import Context
+from django.template.loader import get_template
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect
+from .forms import ContactForm
+
 
 def index(request):
     all_teams = Team.objects.all()
@@ -102,7 +112,20 @@ def points_update(all_teams):
 
 
 def contact(request):
-    return render(request,'team/contact.html')
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['admin@example.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return HttpResponse('<h1>Success! Email sent.</h1>')
+    return render(request, "team/contact.html", {'form': form})
 
 
 def insti(request):

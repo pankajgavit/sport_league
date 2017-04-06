@@ -96,16 +96,102 @@
 		 <div class="gallery">
 			  <section class="row">
                   {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "Real Madrid" %}
 				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
                       <a href="{{ gallery.gallery.url }}">
                       <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
                       </a>
                         <br>
                         <br>
                   <span> </span>
+                  {% endif %}
                   </ul>
-                  {% endfor %}
-			  </section>
+                  {% endfor %}</section>
+                     <section class="row">
+                  {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "FC Barcelona" %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
+                      <a href="{{ gallery.gallery.url }}">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
+                        <br>
+                        <br>
+                  <span> </span>
+                  {% endif %}
+                  </ul>
+                  {% endfor %}</section>
+          <section class="row">
+                  {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "Atletico Madrid" %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
+                      <a href="{{ gallery.gallery.url }}">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
+                        <br>
+                        <br>
+                  <span> </span>
+                  {% endif %}
+                  </ul>
+                  {% endfor %}</section>
+         <section class="row">
+                  {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "Athletico Bilbao" %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
+                      <a href="{{ gallery.gallery.url }}">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
+                        <br>
+                        <br>
+                  <span> </span>
+                  {% endif %}
+                  </ul>
+                  {% endfor %}</section>
+         <section class="row">
+                  {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "Sevilla" %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
+                      <a href="{{ gallery.gallery.url }}">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
+                        <br>
+                        <br>
+                  <span> </span>
+                  {% endif %}
+                  </ul>
+                  {% endfor %}</section>
+         <section class="row">
+                  {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "Valencia" %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
+                      <a href="{{ gallery.gallery.url }}">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
+                        <br>
+                        <br>
+                  <span> </span>
+                  {% endif %}
+                  </ul>
+                  {% endfor %}</section>
+         <section class="row">
+                  {% for gallery in all_gallery %}
+                  {% if gallery.image_team == "Villareal" %}
+				  <ul class="lb-album col-sm-6" style="padding-left: 15px;padding-right: 15px;padding-bottom: 25px;">
+                                     {{ gallery.image_team }}
+                      <a href="{{ gallery.gallery.url }}">
+                      <img src="{{ gallery.gallery.url }}" class="center-block img-responsive img-thumbnail " alt="" style="width: 600px ;height:300px">
+                      </a>
+                        <br>
+                        <br>
+                  <span> </span>
+                  {% endif %}
+                  </ul>
+                  {% endfor %}</section>
 			 <div class="clearfix"> </div>
 		  </div>
          </div>

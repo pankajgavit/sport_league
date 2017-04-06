@@ -6,7 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Gallery
 
 def index(request):
-    all_gallery = Gallery.objects.order_by('-image_info')
+    all_gallery = Gallery.objects.order_by('image_team')
     return render(request, 'gallery/index.html',{'all_gallery': all_gallery})
 
 

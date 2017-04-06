@@ -103,14 +103,17 @@
 				</div>
 				<div class="clearfix"> </div>
 			 </div>
-			 <form>
-				<input type="text" placeholder="Name" required=" ">
-				<input type="text" placeholder="Email" required=" ">
-				<input type="text" placeholder="Website" required=" ">
-				<textarea placeholder="Message..." required=" "></textarea>
-				<input type="submit" value="SEND">
-			 </form>
+
 		 </div>
+         <form method="post">
+                 {% csrf_token %}
+                 <ul>
+                     {{ form.as_ul}}
+                     </ul>
+				<div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+			 </form>
 	 </div>
 </div>
 <!--footer-->

@@ -34,6 +34,8 @@ class Player(models.Model):
     yellow_card = models.IntegerField(default = 0)
     red_card = models.IntegerField(default = 0)
     Rating = models.IntegerField(default = 0)
+    Transfer_team = models.CharField(max_length=250,default="None")
+    Buyout_cause=models.CharField(max_length=50,default="0")
 
     def __str__(self):
         return self.player_name

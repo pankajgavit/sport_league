@@ -30,4 +30,5 @@ urlpatterns = [
     # /team/contact/
     url(r'^institutional/$', views.insti, name='insti'),
 
+
 ]

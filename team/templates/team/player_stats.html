@@ -101,6 +101,9 @@
                             <b>Assists</b>  &emsp;&emsp;&emsp;&nbsp;&nbsp;: &emsp;{{ player.assists }} <br>
                             <b>Yellow Cards</b>  &nbsp;&nbsp;&nbsp;&nbsp;: &emsp;{{ player.yellow_card }} <br>
                             <b>Red Cards</b>  &emsp;&emsp;: &emsp;{{ player.red_card }} <br>
+                            {% if player.Transfer_team != "None" %}
+                            <b>Buyout Clause</b>  &nbsp;&nbsp;&nbsp;&nbsp;: &emsp;{{ player.Buyout_cause }} <br>
+                            {% endif %}
                         <br>
                             </div>
                         </div>
